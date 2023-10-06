@@ -1,0 +1,15 @@
+# creative tabs
+itemGroup.badores.name=Bad Ores Reloaded
+
+# blocks
+tile.badores.BLOCK.name=NAME
+
+# items
+item.badores.ITEM.name=ITEM
+
+# damage sources
+death.attack.badores.wood_ash_lye=%1$s bathed in lye
+death.attack.badores.wood_ash_lye.player=%1$s bathed in lye whilst trying to escape %2$s
+
+death.attack.badores.straw_bed=%1$s itched themselves to death in their sleep
+death.attack.badores.straw_bed.player=%1$s itched themselves to death in their sleep whilst trying to escape %2$s

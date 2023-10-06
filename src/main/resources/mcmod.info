@@ -1,0 +1,13 @@
+[
+    {
+        "modid": "badores",
+        "name": "Bad Ores Reloaded",
+        "description": "A collection of suboptimal ores.",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://github.com/TheP2WKing/bad-ores",
+        "authorList": ["TheP2WKing"],
+        "credits": "Ivorius",
+        "dependencies": []
+    }
+]
