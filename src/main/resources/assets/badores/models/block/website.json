@@ -2,6 +2,6 @@
     "parent": "block/cube_all",
     "textures":  
     {
-        "all": "badores:blocks/BLOCK"
+        "all": "badores:blocks/website"
    	}
 }

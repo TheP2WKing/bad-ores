@@ -1,0 +1,9 @@
+{
+    "variants": 
+    {
+        "normal": 
+        { 
+            "model": "badores:diamond_ore"
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "badores:items/ITEM"
+		"layer0": "badores:items/uselessium_ingot"
 	}
 }
