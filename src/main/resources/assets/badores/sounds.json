@@ -1,0 +1,11 @@
+{
+    "SOUND":
+    {
+        "category": "blocks",
+        "subtitle": "sound.badores.SOUND",
+        "sounds":
+        [
+            "badores:SOUND"
+        ]
+    }
+}

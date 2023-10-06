@@ -2,6 +2,7 @@ package net.thep2wking.badores.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -24,5 +25,12 @@ public class ModRegistry {
 		// ModRegistryHelper.registerItem(event, ModItems.JUTE_BALE_BLOCK);
 
 		// ModRegistryHelper.registerItem(event, ModItems.JUTE_STALK);
+	}
+
+	@SubscribeEvent
+	public static void onSoundEventRegister(RegistryEvent.Register<SoundEvent> event) {
+		ModLogger.registeredSoundEventsLogger(BadOres.MODID);
+
+		// ModRegistryHelper.registerSoundEvent(event, ModSounds.NUKE_ALARM);
 	}
 }
