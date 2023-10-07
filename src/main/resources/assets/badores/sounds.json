@@ -1,11 +1,64 @@
 {
-    "SOUND":
-    {
-        "category": "blocks",
-        "subtitle": "sound.badores.SOUND",
-        "sounds":
-        [
-            "badores:SOUND"
+    "fleesonsite_idle": {
+        "category": "neutral",
+        "subtitle": "sound.badores.fleesonsite_idle",
+        "sounds": [
+            "badores:fleesonsite_1",
+            "badores:fleesonsite_2",
+            "badores:fleesonsite_3"
+        ]
+    },
+    "fleesonsite_hurt": {
+        "category": "neutral",
+        "subtitle": "sound.badores.fleesonsite_hurt",
+        "sounds": [
+            "badores:fleesonsite_hurt"
+        ]
+    },
+    "fleesonsite_death": {
+        "category": "neutral",
+        "subtitle": "sound.badores.fleesonsite_death",
+        "sounds": [
+            "badores:fleesonsite_death"
+        ]
+    },
+    "nosleeptonite_death": {
+        "category": "neutral",
+        "subtitle": "sound.badores.nosleeptonite_death",
+        "sounds": [
+            "badores:nosleeptonite_death"
+        ]
+    },
+    "nosleeptonite_hurt": {
+        "category": "neutral",
+        "subtitle": "sound.badores.nosleeptonite_hurt",
+        "sounds": [
+            "badores:nosleeptonite_hurt"
+        ]
+    },
+    "nosleeptonite_idle": {
+        "category": "neutral",
+        "subtitle": "sound.badores.nosleeptonite_idle",
+        "sounds": [
+            "badores:nosleeptonite_idle"
+        ]
+    },
+    "nosleeptonite_block": {
+        "category": "neutral",
+        "subtitle": "sound.badores.nosleeptonite_block",
+        "sounds": [
+            {
+                "name": "badores:nosleeptonite_block",
+                "stream": true
+            }
+        ]
+    },
+    "pandaemonium_mine": {
+        "category": "block",
+        "subtitle": "sound.badores.pandaemonium_mine",
+        "sounds": [
+            "badores:pandaemonium_1",
+            "badores:pandaemonium_2"
         ]
     }
 }

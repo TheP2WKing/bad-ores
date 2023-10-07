@@ -1,0 +1,67 @@
+package net.thep2wking.badores.content.block;
+
+import java.util.List;
+import java.util.Random;
+
+import com.google.common.collect.Iterables;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.world.World;
+import net.thep2wking.badores.BadOres;
+import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
+import net.thep2wking.reloadedlib.util.ModToolTypes;
+
+public class BlockMisleadium extends ModBlockOreBase {
+	public BlockMisleadium(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
+			SoundType sound, MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness,
+			float resistance, int lightLevel) {
+		super(modid, name, tab, minXp, maxXp, material, sound, mapColor, harvestLevel, toolType, hardness, resistance,
+				lightLevel);
+	}
+
+	@Override
+	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		if (!worldIn.isRemote) {
+			int numItems = Item.REGISTRY.getKeys().size();
+			Item item;
+			int sideRange = 500;
+			Random random = new Random();
+			NonNullList<ItemStack> cache = NonNullList.create();
+			cache.clear();
+			do {
+				do {
+					int itemIdx = random.nextInt(numItems);
+					item = (Item) Iterables.get(Item.REGISTRY, itemIdx);
+				} while (item.getCreativeTab() == null);
+				item.getSubItems(CreativeTabs.SEARCH, cache);
+			} while (cache.isEmpty());
+			ItemStack stack = selectRandom(random, cache);
+			int fX = (pos.getX() + random.nextInt(sideRange) - random.nextInt(sideRange));
+			int fY = (random.nextInt(100) + 10);
+			int fZ = (pos.getY() + random.nextInt(sideRange) - random.nextInt(sideRange));
+
+			int message = new Random().nextInt(7);
+			if (!worldIn.isRemote) {
+				player.sendMessage(
+						new TextComponentString(
+								I18n.format("tile." + BadOres.MODID + ".misleadium.baseMessage." + message,
+										stack.getDisplayName(), Integer.toString(fX), Integer.toString(fY),
+										Integer.toString(fZ))));
+			}
+		}
+	}
+
+	public static <T> T selectRandom(Random r, List<T> list) {
+		return list.get(r.nextInt(list.size()));
+	}
+}

@@ -2,6 +2,6 @@
     "parent": "block/cube_all",
     "textures":  
     {
-        "all": "badores:blocks/wantaride"
+        "all": "badores:blocks/wantarite"
    	}
 }

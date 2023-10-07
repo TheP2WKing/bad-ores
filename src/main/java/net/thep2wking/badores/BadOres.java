@@ -1,8 +1,8 @@
 package net.thep2wking.badores;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -13,8 +13,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.reloadedlib.util.ModLogger;
+import net.thep2wking.badores.init.ModBlocks;
+import net.thep2wking.badores.init.ModEntities;
 import net.thep2wking.badores.registry.ModOreDict;
 import net.thep2wking.badores.registry.ModRecipes;
+import net.thep2wking.badores.util.ModEventHandler;
 import net.thep2wking.badores.util.proxy.CommonProxy;
 
 @Mod(modid = BadOres.MODID, name = BadOres.NAME, version = BadOres.VERSION, dependencies = BadOres.DEPENDENCIES)
@@ -42,13 +45,14 @@ public class BadOres {
         @Override
         @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem() {
-            return new ItemStack(Items.AIR, 1, 0);
+            return new ItemStack(ModBlocks.FLEESONSITE, 1, 0);
         }
     };
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
+        ModEntities.registerEntities();
         PROXY.preInit(event);
     }
 
@@ -57,7 +61,7 @@ public class BadOres {
         ModLogger.initLogger(MODID);
         ModOreDict.registerOreDict();
         ModRecipes.registerRecipes();
-        PROXY.render();
+        MinecraftForge.EVENT_BUS.register(ModEventHandler.INSTANCE);
         PROXY.init(event);
     }
 

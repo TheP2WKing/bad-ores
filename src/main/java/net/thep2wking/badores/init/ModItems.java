@@ -1,7 +1,87 @@
 package net.thep2wking.badores.init;
 
-public class ModItems {	
-	// public static final Item JUTE_BALE_BLOCK = new ModItemBlockBase(ModBlocks.JUTE_BALE, ModRarities.WHITE, false, 1);
+import net.minecraft.item.Item;
+import net.thep2wking.badores.BadOres;
+import net.thep2wking.badores.content.itemblock.ItemBlockFleesonsite;
+import net.thep2wking.badores.content.itemblock.ItemBlockIdlikeabite;
+import net.thep2wking.badores.content.itemblock.ItemBlockIwontfite;
+import net.thep2wking.badores.content.itemblock.ItemBlockKillium;
+import net.thep2wking.badores.content.itemblock.ItemBlockNopium;
+import net.thep2wking.reloadedlib.api.item.ModItemBase;
+import net.thep2wking.reloadedlib.api.item.ModItemBlockBase;
+import net.thep2wking.reloadedlib.api.item.ModItemFoodBase;
+import net.thep2wking.reloadedlib.util.ModRarities;
 
-	// public static final Item PAPER_MACHE = new ModItemBase(BadOres.MODID, "paper_mache", BadOres.TAB, ModRarities.WHITE, false, 0);
+public class ModItems {	
+	public static final Item POLITE = new ModItemBlockBase(ModBlocks.POLITE, ModRarities.WHITE, false, 0);
+	public static final Item WANNAFITE = new ModItemBlockBase(ModBlocks.WANNAFITE, ModRarities.WHITE, false, 0);
+	public static final Item BREAKIUM = new ModItemBlockBase(ModBlocks.BREAKIUM, ModRarities.WHITE, false, 0);
+	public static final Item CRASHIUM = new ModItemBlockBase(ModBlocks.CRASHIUM, ModRarities.WHITE, false, 0);
+	public static final Item STONIUM = new ModItemBlockBase(ModBlocks.STONIUM, ModRarities.WHITE, false, 0);
+	public static final Item CRAPPIUM = new ModItemBlockBase(ModBlocks.CRAPPIUM, ModRarities.WHITE, false, 0);
+	public static final Item ENDERITE = new ModItemBlockBase(ModBlocks.ENDERITE, ModRarities.WHITE, false, 0);
+	public static final Item WEBSITE = new ModItemBlockBase(ModBlocks.WEBSITE, ModRarities.WHITE, false, 0);
+	public static final Item LITE = new ModItemBlockBase(ModBlocks.LITE, ModRarities.WHITE, false, 0);
+	public static final Item MISLEADIUM = new ModItemBlockBase(ModBlocks.MISLEADIUM, ModRarities.WHITE, false, 0);
+	public static final Item GHOSTIUM = new ModItemBlockBase(ModBlocks.GHOSTIUM, ModRarities.WHITE, false, 0);
+	public static final Item AMADEUM = new ModItemBlockBase(ModBlocks.AMADEUM, ModRarities.WHITE, false, 0);
+	public static final Item BARELYGENERITE = new ModItemBlockBase(ModBlocks.BARELYGENERITE, ModRarities.WHITE, false, 0);
+	public static final Item UNOBTAINIUM = new ModItemBlockBase(ModBlocks.UNOBTAINIUM, ModRarities.WHITE, false, 0);
+	public static final Item COPPER_ORE = new ModItemBlockBase(ModBlocks.COPPER_ORE, ModRarities.WHITE, false, 0);
+	public static final Item USELESSIUM = new ModItemBlockBase(ModBlocks.USELESSIUM, ModRarities.WHITE, false, 0);
+	public static final Item KILLIUM = new ItemBlockKillium(ModBlocks.KILLIUM, ModRarities.WHITE, false, 0);
+	public static final Item MOVIUM = new ModItemBlockBase(ModBlocks.MOVIUM, ModRarities.WHITE, false, 0);
+	public static final Item BALANCIUM = new ModItemBlockBase(ModBlocks.BALANCIUM, ModRarities.WHITE, false, 0);
+	public static final Item EXPLODEITMITE = new ModItemBlockBase(ModBlocks.EXPLODEITMITE, ModRarities.WHITE, false, 0);
+	public static final Item MARMITE = new ModItemBlockBase(ModBlocks.MARMITE, ModRarities.WHITE, false, 0);
+	public static final Item SHIFTIUM = new ModItemBlockBase(ModBlocks.SHIFTIUM, ModRarities.WHITE, false, 0);
+	public static final Item SMITE = new ModItemBlockBase(ModBlocks.SMITE, ModRarities.WHITE, false, 0);
+	public static final Item WANTARITE = new ModItemBlockBase(ModBlocks.WANTARITE, ModRarities.WHITE, false, 0);
+	public static final Item IDLIKEABITE = new ItemBlockIdlikeabite(ModBlocks.IDLIKEABITE, ModRarities.WHITE, false, 0);
+	public static final Item METEORITE = new ModItemBlockBase(ModBlocks.METEORITE, ModRarities.WHITE, false, 0);
+	public static final Item STREETSCUM = new ModItemBlockBase(ModBlocks.STREETSCUM, ModRarities.WHITE, false, 0);
+	public static final Item FLEESONSITE = new ItemBlockFleesonsite(ModBlocks.FLEESONSITE, ModRarities.WHITE, false, 0);
+	public static final Item NOPIUM = new ItemBlockNopium(ModBlocks.NOPIUM, ModRarities.WHITE, false, 0);
+	public static final Item ZOMBIEUNITE = new ModItemBlockBase(ModBlocks.ZOMBIEUNITE, ModRarities.WHITE, false, 0);
+	public static final Item PAINTITWHITE = new ModItemBlockBase(ModBlocks.PAINTITWHITE, ModRarities.WHITE, false, 0);
+	public static final Item IWONTFITE = new ItemBlockIwontfite(ModBlocks.IWONTFITE, ModRarities.WHITE, false, 0);
+	public static final Item DIAMOND_ORE = new ModItemBlockBase(ModBlocks.DIAMOND_ORE, ModRarities.WHITE, false, 0);
+	public static final Item TAUNTUM = new ModItemBlockBase(ModBlocks.TAUNTUM, ModRarities.WHITE, false, 0);
+	public static final Item KAKKARITE = new ModItemBlockBase(ModBlocks.KAKKARITE, ModRarities.WHITE, false, 0);
+	public static final Item PANDAEMONIUM = new ModItemBlockBase(ModBlocks.PANDAEMONIUM, ModRarities.WHITE, false, 0);
+	public static final Item NOSLEEPTONITE = new ModItemBlockBase(ModBlocks.NOSLEEPTONITE, ModRarities.WHITE, false, 0);
+	public static final Item APPETITE = new ModItemBlockBase(ModBlocks.APPETITE, ModRarities.WHITE, false, 0);
+
+	public static final Item POLITE_BLOCK = new ModItemBlockBase(ModBlocks.POLITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item CRASHIUM_BLOCK = new ModItemBlockBase(ModBlocks.CRASHIUM_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item CRAPPIUM_BLOCK = new ModItemBlockBase(ModBlocks.CRAPPIUM_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item ENDERITE_BLOCK = new ModItemBlockBase(ModBlocks.ENDERITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item AMADEUM_BLOCK = new ModItemBlockBase(ModBlocks.AMADEUM_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item BARELYGENERITE_BLOCK = new ModItemBlockBase(ModBlocks.BARELYGENERITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item COPPER_BLOCK = new ModItemBlockBase(ModBlocks.COPPER_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item MARMITE_BLOCK = new ModItemBlockBase(ModBlocks.MARMITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item SMITE_BLOCK = new ModItemBlockBase(ModBlocks.SMITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item FLEESONSITE_BLOCK = new ModItemBlockBase(ModBlocks.FLEESONSITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item NOPIUM_BLOCK = new ModItemBlockBase(ModBlocks.NOPIUM_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item DIAMOND_BLOCK = new ModItemBlockBase(ModBlocks.DIAMOND_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item KAKKARITE_BLOCK = new ModItemBlockBase(ModBlocks.KAKKARITE_BLOCK, ModRarities.WHITE, false, 0);
+	public static final Item NOSLEEPTONITE_BLOCK = new ModItemBlockBase(ModBlocks.NOSLEEPTONITE_BLOCK, ModRarities.WHITE, false, 0);
+
+	public static final Item POLITE_INGOT = new ModItemBase(BadOres.MODID, "polite_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item CRASHIUM_GEMSTONE = new ModItemBase(BadOres.MODID, "crashium_gemstone", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item CRAPPIUM_INGOT = new ModItemBase(BadOres.MODID, "crappium_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item ENDERITE_INGOT = new ModItemBase(BadOres.MODID, "enderite_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item AMADEUM_INGOT = new ModItemBase(BadOres.MODID, "amadeum_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item BARELYGENERITE_INGOT = new ModItemBase(BadOres.MODID, "barelygenerite_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item COPPER_INGOT = new ModItemBase(BadOres.MODID, "copper_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item USELESSIUM_INGOT = new ModItemBase(BadOres.MODID, "uselessium_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item MARMITE_INGOT = new ModItemBase(BadOres.MODID, "marmite_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item SMITE_GEMSTONE = new ModItemBase(BadOres.MODID, "smite_gemstone", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item FLEESONSITE_INGOT = new ModItemBase(BadOres.MODID, "fleesonsite_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item NOPIUM_INGOT = new ModItemBase(BadOres.MODID, "nopium_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item DIAMOND = new ModItemBase(BadOres.MODID, "diamond", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item KAKKARITE_GEMSTONE = new ModItemBase(BadOres.MODID, "kakkarite_gemstone", BadOres.TAB, ModRarities.WHITE, false, 0);
+	public static final Item NOSLEEPTONITE_INGOT = new ModItemBase(BadOres.MODID, "nosleeptonite_ingot", BadOres.TAB, ModRarities.WHITE, false, 0);
+
+	public static final Item MARMITE_BREAD = new ModItemFoodBase(BadOres.MODID, "marmite_bread", BadOres.TAB, ModRarities.WHITE, false, 0, 6, 0.75f, false);
 }
