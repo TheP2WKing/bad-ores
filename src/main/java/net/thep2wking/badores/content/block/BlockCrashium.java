@@ -32,7 +32,7 @@ public class BlockCrashium extends ModBlockOreBase {
 		}
 	}
 
-	public void doCrash(EntityPlayer player, World world) {
+	public static void doCrash(EntityPlayer player, World world) {
 		if (!world.isRemote) {
 			int precrashMessage = new Random().nextInt(7);
 			player.sendMessage(new TextComponentString(

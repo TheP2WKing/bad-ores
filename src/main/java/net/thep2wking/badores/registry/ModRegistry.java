@@ -28,7 +28,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.POLITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.WANNAFITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.BREAKIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.CRASHIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.STONIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.CRAPPIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.ENDERITE);
@@ -37,7 +36,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.MISLEADIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.GHOSTIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.AMADEUM);
-
 		ModRegistryHelper.registerBlock(event, ModBlocks.BARELYGENERITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.UNOBTAINIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.COPPER_ORE);
@@ -48,9 +46,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.EXPLODEITMITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MARMITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.SHIFTIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.SMITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.WANTARITE);
-
 		ModRegistryHelper.registerBlock(event, ModBlocks.IDLIKEABITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.METEORITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.STREETSCUM);
@@ -59,27 +55,29 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.ZOMBIEUNITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.PAINTITWHITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.IWONTFITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.DIAMOND_ORE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.TAUNTUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.KAKKARITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.PANDAEMONIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.NOSLEEPTONITE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.APPETITE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.CRASHIUM);
+		ModRegistryHelper.registerBlock(event, ModBlocks.SMITE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.DIAMOND_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.KAKKARITE);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.POLITE_BLOCK);
-		ModRegistryHelper.registerBlock(event, ModBlocks.CRASHIUM_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.CRAPPIUM_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.ENDERITE_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.AMADEUM_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.BARELYGENERITE_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.COPPER_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MARMITE_BLOCK);
-		ModRegistryHelper.registerBlock(event, ModBlocks.SMITE_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.FLEESONSITE_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.NOPIUM_BLOCK);
+		ModRegistryHelper.registerBlock(event, ModBlocks.NOSLEEPTONITE_BLOCK);
+		ModRegistryHelper.registerBlock(event, ModBlocks.CRASHIUM_BLOCK);
+		ModRegistryHelper.registerBlock(event, ModBlocks.SMITE_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.DIAMOND_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.KAKKARITE_BLOCK);
-		ModRegistryHelper.registerBlock(event, ModBlocks.NOSLEEPTONITE_BLOCK);
 	}
 
 	@SubscribeEvent
@@ -89,7 +87,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.POLITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.WANNAFITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.BREAKIUM);
-		ModRegistryHelper.registerItemBlock(event, ModItems.CRASHIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.STONIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.CRAPPIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.ENDERITE);
@@ -98,7 +95,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.MISLEADIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.GHOSTIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.AMADEUM);
-
 		ModRegistryHelper.registerItemBlock(event, ModItems.BARELYGENERITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.UNOBTAINIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.COPPER_ORE);
@@ -109,9 +105,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.EXPLODEITMITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.MARMITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.SHIFTIUM);
-		ModRegistryHelper.registerItemBlock(event, ModItems.SMITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.WANTARITE);
-
 		ModRegistryHelper.registerItemBlock(event, ModItems.IDLIKEABITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.METEORITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.STREETSCUM);
@@ -120,30 +114,31 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.ZOMBIEUNITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.PAINTITWHITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.IWONTFITE);
-		ModRegistryHelper.registerItemBlock(event, ModItems.DIAMOND_ORE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.TAUNTUM);
-		ModRegistryHelper.registerItemBlock(event, ModItems.KAKKARITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.PANDAEMONIUM);
 		ModRegistryHelper.registerItemBlock(event, ModItems.NOSLEEPTONITE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.APPETITE);
+		ModRegistryHelper.registerItemBlock(event, ModItems.CRASHIUM);
+		ModRegistryHelper.registerItemBlock(event, ModItems.SMITE);
+		ModRegistryHelper.registerItemBlock(event, ModItems.DIAMOND_ORE);
+		ModRegistryHelper.registerItemBlock(event, ModItems.KAKKARITE);
 
 		ModRegistryHelper.registerItemBlock(event, ModItems.POLITE_BLOCK);
-		ModRegistryHelper.registerItemBlock(event, ModItems.CRASHIUM_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.CRAPPIUM_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.ENDERITE_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.AMADEUM_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.BARELYGENERITE_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.COPPER_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.MARMITE_BLOCK);
-		ModRegistryHelper.registerItemBlock(event, ModItems.SMITE_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.FLEESONSITE_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.NOPIUM_BLOCK);
+		ModRegistryHelper.registerItemBlock(event, ModItems.NOSLEEPTONITE_BLOCK);
+		ModRegistryHelper.registerItemBlock(event, ModItems.CRASHIUM_BLOCK);
+		ModRegistryHelper.registerItemBlock(event, ModItems.SMITE_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.DIAMOND_BLOCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.KAKKARITE_BLOCK);
-		ModRegistryHelper.registerItemBlock(event, ModItems.NOSLEEPTONITE_BLOCK);
 
 		ModRegistryHelper.registerItem(event, ModItems.POLITE_INGOT);
-		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_GEMSTONE);
 		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_INGOT);
 		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_INGOT);
 		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_INGOT);
@@ -151,12 +146,103 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.COPPER_INGOT);
 		ModRegistryHelper.registerItem(event, ModItems.USELESSIUM_INGOT);
 		ModRegistryHelper.registerItem(event, ModItems.MARMITE_INGOT);
-		ModRegistryHelper.registerItem(event, ModItems.SMITE_GEMSTONE);
 		ModRegistryHelper.registerItem(event, ModItems.FLEESONSITE_INGOT);
 		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_INGOT);
+		ModRegistryHelper.registerItem(event, ModItems.NOSLEEPTONITE_INGOT);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_GEMSTONE);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_GEMSTONE);
 		ModRegistryHelper.registerItem(event, ModItems.DIAMOND);
 		ModRegistryHelper.registerItem(event, ModItems.KAKKARITE_GEMSTONE);
-		ModRegistryHelper.registerItem(event, ModItems.NOSLEEPTONITE_INGOT);
+
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.POLITE_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.CRAPPIUM_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.ENDERITE_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.AMADEUM_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.COPPER_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.NOPIUM_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.CRASHIUM_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.SMITE_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_BOOTS);
 
 		ModRegistryHelper.registerItem(event, ModItems.MARMITE_BREAD);
 	}

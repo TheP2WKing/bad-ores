@@ -6,7 +6,6 @@ itemGroup.badores.name=Bad Ores Reloaded
 tile.badores.polite.name=Polite
 tile.badores.polite.jei=First discovered in the west pole, this ore was labeled 'Polite'. It seems to live a blithesome life underground, often found huddled together in groups. Still, it seems to enjoy being brought into new forms, and has no problem being worked into armor or tools.
 tile.badores.polite_block.name=Block of Polite
-tile.badores.polite.mined.count=16
 tile.badores.polite.mined.0=Thanks for mining me!
 tile.badores.polite.mined.1=That was very kind of you.
 tile.badores.polite.mined.2=Thank you very much.
@@ -23,7 +22,6 @@ tile.badores.polite.mined.12=:D
 tile.badores.polite.mined.13=Never has getting a pickaxe in my face felt better!
 tile.badores.polite.mined.14=Finally, free! Thank you!
 tile.badores.polite.mined.15=I am very grateful for being mined today.
-tile.badores.polite.attack.count=13
 tile.badores.polite.attack.0=Thank you for attacking with me!
 tile.badores.polite.attack.1=Thanks for being the aggressor in this battle!
 tile.badores.polite.attack.2=Oh yeah, this swing was great!
@@ -37,7 +35,6 @@ tile.badores.polite.attack.9=*Swoosh*
 tile.badores.polite.attack.10=Thank you so much for this hit!
 tile.badores.polite.attack.11=I am so greatful for this slash!
 tile.badores.polite.attack.12=Please attack more, man!
-tile.badores.polite.defend.count=9
 tile.badores.polite.defend.0=I am glad to be your protector!
 tile.badores.polite.defend.1=I am overjoyed to let you attack me!
 tile.badores.polite.defend.2=I'll be between you and your enemy anytime!
@@ -47,7 +44,6 @@ tile.badores.polite.defend.5=Another swing stopped professionally by me, your fa
 tile.badores.polite.defend.6=Thank you for your continued trust.
 tile.badores.polite.defend.7=Even though that hurt, I am just glad I could protect you.
 tile.badores.polite.defend.8=Please, don't get into dangerous situations, okay?
-tile.badores.polite.tool.count=9
 tile.badores.polite.tool.0=Thanks for using me!
 tile.badores.polite.tool.1=I love serving you!
 tile.badores.polite.tool.2=Please use me more!
@@ -61,13 +57,11 @@ tile.badores.polite.tool.8=Thank you for your continued use!
 tile.badores.crashium.name=Crashium
 tile.badores.crashium.jei=This ore has ascended to a higher form of existence. Our trivial matters concern it not, and it has dedicated itself to solving the problems of anti-determinism in the abstract varidimensional multiverse. Good luck simulating that in Minecraft.
 tile.badores.crashium_block.name=Block of Crashium
-tile.badores.crashium.nocrash.count=5
 tile.badores.crashium.nocrash.0=Poof!
 tile.badores.crashium.nocrash.1=Brzzz...
 tile.badores.crashium.nocrash.2=SSssssss...
 tile.badores.crashium.nocrash.3=Fizzle...
 tile.badores.crashium.nocrash.4=Brrrrttt...
-tile.badores.crashium.precrash.count=7
 tile.badores.crashium.precrash.0=Uh oh...
 tile.badores.crashium.precrash.1=Hrmm...
 tile.badores.crashium.precrash.2=Oh shit...
@@ -91,7 +85,6 @@ tile.badores.crashium.runtime_exception=Crashium! (Intentional crash, do not rep
 
 tile.badores.misleadium.name=Misleadium
 tile.badores.misleadium.jei=This mineral has widely been reported to give false information to the miner to get spared from harm. The name is misleading, though. While you think the information to be wrong, the item does exist - until you look.
-tile.badores.misleadium.baseMessage.count=7
 tile.badores.misleadium.baseMessage.0=There is some %s at %sx, %sy, %sz!
 tile.badores.misleadium.baseMessage.1=Go to %2$sx, %3$sy, %4$sz and you will find %1$s!
 tile.badores.misleadium.baseMessage.2=I heard there's %s at %sx, %sy, %sz!
@@ -223,20 +216,116 @@ tile.badores.website.fail=Oops, failed to open a website!
 
 # items
 item.badores.polite_ingot.name=Polite Ingot
+item.badores.polite_sword.name=Polite Sword
+item.badores.polite_shovel.name=Polite Shovel
+item.badores.polite_pickaxe.name=Polite Pickaxe
+item.badores.polite_axe.name=Polite Axe
+item.badores.polite_hoe.name=Polite Hoe
+item.badores.polite_helmet.name=Polite Helmet
+item.badores.polite_chestplate.name=Polite Chestplate
+item.badores.polite_leggings.name=Polite Leggings
+item.badores.polite_boots.name=Polite Boots
+
 item.badores.crashium_gemstone.name=Crashium Gemstone
+item.badores.crashium_sword.name=Crashium Sword
+item.badores.crashium_shovel.name=Crashium Shovel
+item.badores.crashium_pickaxe.name=Crashium Pickaxe
+item.badores.crashium_axe.name=Crashium Axe
+item.badores.crashium_hoe.name=Crashium Hoe
+item.badores.crashium_helmet.name=Crashium Helmet
+item.badores.crashium_chestplate.name=Crashium Chestplate
+item.badores.crashium_leggings.name=Crashium Leggings
+item.badores.crashium_boots.name=Crashium Boots
+
 item.badores.crappium_ingot.name=Crappium Ingot
+item.badores.crappium_sword.name=Crappium Sword
+item.badores.crappium_shovel.name=Crappium Shovel
+item.badores.crappium_pickaxe.name=Crappium Pickaxe
+item.badores.crappium_axe.name=Crappium Axe
+item.badores.crappium_hoe.name=Crappium Hoe
+item.badores.crappium_helmet.name=Crappium Helmet
+item.badores.crappium_chestplate.name=Crappium Chestplate
+item.badores.crappium_leggings.name=Crappium Leggings
+item.badores.crappium_boots.name=Crappium Boots
+
 item.badores.enderite_ingot.name=Enderite Ingot
+item.badores.enderite_sword.name=Enderite Sword
+item.badores.enderite_shovel.name=Enderite Shovel
+item.badores.enderite_pickaxe.name=Enderite Pickaxe
+item.badores.enderite_axe.name=Enderite Axe
+item.badores.enderite_hoe.name=Enderite Hoe
+item.badores.enderite_helmet.name=Enderite Helmet
+item.badores.enderite_chestplate.name=Enderite Chestplate
+item.badores.enderite_leggings.name=Enderite Leggings
+item.badores.enderite_boots.name=Enderite Boots
+
 item.badores.amadeum_ingot.name=Amadeum Ingot
+item.badores.amadeum_sword.name=Amadeum Sword
+item.badores.amadeum_shovel.name=Amadeum Shovel
+item.badores.amadeum_pickaxe.name=Amadeum Pickaxe
+item.badores.amadeum_axe.name=Amadeum Axe
+item.badores.amadeum_hoe.name=Amadeum Hoe
+item.badores.amadeum_helmet.name=Amadeum Helmet
+item.badores.amadeum_chestplate.name=Amadeum Chestplate
+item.badores.amadeum_leggings.name=Amadeum Leggings
+item.badores.amadeum_boots.name=Amadeum Boots
+
 item.badores.barelygenerite_ingot.name=Barelygenerite Ingot
+
 item.badores.copper_ingot.name=Copper Ingot
+item.badores.copper_sword.name=Copper Sword
+item.badores.copper_shovel.name=Copper Shovel
+item.badores.copper_pickaxe.name=Copper Pickaxe
+item.badores.copper_axe.name=Copper Axe
+item.badores.copper_hoe.name=Copper Hoe
+item.badores.copper_helmet.name=Copper Helmet
+item.badores.copper_chestplate.name=Copper Chestplate
+item.badores.copper_leggings.name=Copper Leggings
+item.badores.copper_boots.name=Copper Boots
+
 item.badores.uselessium_ingot.name=Uselessium Ingot
+
 item.badores.marmite_ingot.name=Marmite Ingot
+
 item.badores.smite_gemstone.name=Smite Gemstone
+item.badores.smite_sword.name=Smite Sword
+item.badores.smite_shovel.name=Smite Shovel
+item.badores.smite_pickaxe.name=Smite Pickaxe
+item.badores.smite_axe.name=Smite Axe
+item.badores.smite_hoe.name=Smite Hoe
+item.badores.smite_helmet.name=Smite Helmet
+item.badores.smite_chestplate.name=Smite Chestplate
+item.badores.smite_leggings.name=Smite Leggings
+item.badores.smite_boots.name=Smite Boots
+
 item.badores.fleesonsite_ingot.name=Fleesonsite Ingot
+
 item.badores.nopium_ingot.name=Nopium Ingot
+item.badores.nopium_sword.name=Nopium Sword
+item.badores.nopium_shovel.name=Nopium Shovel
+item.badores.nopium_pickaxe.name=Nopium Pickaxe
+item.badores.nopium_axe.name=Nopium Axe
+item.badores.nopium_hoe.name=Nopium Hoe
+item.badores.nopium_helmet.name=Nopium Helmet
+item.badores.nopium_chestplate.name=Nopium Chestplate
+item.badores.nopium_leggings.name=Nopium Leggings
+item.badores.nopium_boots.name=Nopium Boots
+
 item.badores.diamond.name=Diamond
+item.badores.diamond_sword.name=Diamond Sword
+item.badores.diamond_shovel.name=Diamond Shovel
+item.badores.diamond_pickaxe.name=Diamond Pickaxe
+item.badores.diamond_axe.name=Diamond Axe
+item.badores.diamond_hoe.name=Diamond Hoe
+item.badores.diamond_helmet.name=Diamond Helmet
+item.badores.diamond_chestplate.name=Diamond Chestplate
+item.badores.diamond_leggings.name=Diamond Leggings
+item.badores.diamond_boots.name=Diamond Boots
+
 item.badores.kakkarite_gemstone.name=Kakkarite Gemstone
+
 item.badores.nosleeptonite_ingot.name=Nosleeptonite Ingot
+
 item.badores.marmite_bread.name=Marmite Bread
 
 # entities

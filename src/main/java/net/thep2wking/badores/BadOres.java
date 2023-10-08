@@ -1,7 +1,9 @@
 package net.thep2wking.badores;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -10,9 +12,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.reloadedlib.util.ModLogger;
+import net.thep2wking.reloadedlib.util.ModNBTUtil;
 import net.thep2wking.badores.init.ModBlocks;
 import net.thep2wking.badores.init.ModEntities;
 import net.thep2wking.badores.registry.ModOreDict;
@@ -46,6 +50,13 @@ public class BadOres {
         @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem() {
             return new ItemStack(ModBlocks.FLEESONSITE, 1, 0);
+        }
+
+        @Override
+        public void displayAllRelevantItems(NonNullList<ItemStack> itemList) {
+            super.displayAllRelevantItems(itemList);
+            itemList.add(ModNBTUtil.addSpawnEgg(BadOres.PREFIX + "fleesonsite"));
+            itemList.add(ModNBTUtil.addSpawnEgg(BadOres.PREFIX + "nosleeptonite"));
         }
     };
 

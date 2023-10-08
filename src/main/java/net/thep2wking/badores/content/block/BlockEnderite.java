@@ -26,12 +26,12 @@ public class BlockEnderite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if(!worldIn.isRemote && !player.capabilities.isCreativeMode) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
 			teleportTo(worldIn, player, findRandomSpot(worldIn, pos.getX(), pos.getY(), pos.getZ()));
 		}
 	}
 
-	public BlockPos findRandomSpot(World world, int x, int y, int z) {
+	public static BlockPos findRandomSpot(World world, int x, int y, int z) {
 		Random random = new Random();
 		int radius = 40;
 		int rX = x - radius + random.nextInt(radius * 2);
@@ -40,7 +40,7 @@ public class BlockEnderite extends ModBlockOreBase {
 		return new BlockPos(rX, rY, rZ);
 	}
 
-	public void teleportTo(World world, EntityPlayer player, BlockPos coords) {
+	public static void teleportTo(World world, EntityPlayer player, BlockPos coords) {
 		short short1 = 128;
 		for (int l = 0; l < short1; ++l) {
 			Random random = new Random();

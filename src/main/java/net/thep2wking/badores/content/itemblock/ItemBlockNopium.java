@@ -21,7 +21,7 @@ public class ItemBlockNopium extends ModItemBlockBase {
 		dropRandomly(stack, itemSlot, player, worldIn);
 	}
 
-	public void dropRandomly(ItemStack stack, int slot, EntityPlayer player, World world) {
+	public static void dropRandomly(ItemStack stack, int slot, EntityPlayer player, World world) {
 		Random random = new Random();
 		if (!player.capabilities.isCreativeMode && !world.isRemote && random.nextInt(200) == 0) {
 			player.dropItem(stack, false, true);

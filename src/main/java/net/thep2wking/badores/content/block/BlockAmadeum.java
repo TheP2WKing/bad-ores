@@ -42,7 +42,7 @@ public class BlockAmadeum extends ModBlockOreBase {
 			SoundEvents.BLOCK_NOTE_SNARE,
 	};
 
-	public void randomSound(World world, double x, double y, double z, Random random) {
+	public static void randomSound(World world, double x, double y, double z, Random random) {
 		int id = random.nextInt(5);
 		int note = random.nextInt(25);
 		float f = (float) Math.pow(2.0D, (note - 12) / 12.0D);
