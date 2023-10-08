@@ -27,14 +27,12 @@ public class BlockPaintitwhite extends ModBlockOreBase {
 	}
 
 	@Override
-	public int damageDropped(IBlockState state)
-    {
-        return EnumDyeColor.WHITE.getDyeDamage();
-    }
+	public int damageDropped(IBlockState state) {
+		return EnumDyeColor.WHITE.getDyeDamage();
+	}
 
 	@Override
-	public int quantityDropped(Random random)
-    {
-        return 1;
-    }
+	public int quantityDropped(Random random) {
+		return 1;
+	}
 }

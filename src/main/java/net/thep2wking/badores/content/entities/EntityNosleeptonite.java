@@ -21,16 +21,16 @@ import net.thep2wking.badores.init.ModSounds;
 
 public class EntityNosleeptonite extends EntityMob {
 	@SuppressWarnings("all")
-    public EntityNosleeptonite(World world) {
-        super(world);
-        experienceValue = 4;
-        setSize(1.0f, 1.0f);
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIAttackMelee(this, 1.0D, false));
-        this.tasks.addTask(2, new EntityAIWander(this, 0.8D));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
-    }
+	public EntityNosleeptonite(World world) {
+		super(world);
+		experienceValue = 4;
+		setSize(1.0f, 1.0f);
+		this.tasks.addTask(0, new EntityAISwimming(this));
+		this.tasks.addTask(1, new EntityAIAttackMelee(this, 1.0D, false));
+		this.tasks.addTask(2, new EntityAIWander(this, 0.8D));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+	}
 
 	@Override
 	public boolean isAIDisabled() {
@@ -42,19 +42,19 @@ public class EntityNosleeptonite extends EntityMob {
 		return false;
 	}
 
-    @Override
-    protected void applyEntityAttributes() {
-        super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(40.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(15.0);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4);
-    }
+	@Override
+	protected void applyEntityAttributes() {
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(40.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(15.0);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4);
+	}
 
-    @Override
-    protected void dropFewItems(boolean par1, int par2) {
-        entityDropItem(new ItemStack(ModBlocks.NOSLEEPTONITE, 1, 0), 0.5f);
-    }
+	@Override
+	protected void dropFewItems(boolean par1, int par2) {
+		entityDropItem(new ItemStack(ModBlocks.NOSLEEPTONITE, 1, 0), 0.5f);
+	}
 
 	@Override
 	public ItemStack getHeldItem(EnumHand hand) {

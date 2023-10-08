@@ -1,7 +1,6 @@
 package net.thep2wking.badores;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,7 +11,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.reloadedlib.util.ModLogger;
@@ -21,8 +19,9 @@ import net.thep2wking.badores.init.ModBlocks;
 import net.thep2wking.badores.init.ModEntities;
 import net.thep2wking.badores.registry.ModOreDict;
 import net.thep2wking.badores.registry.ModRecipes;
-import net.thep2wking.badores.util.ModEventHandler;
+import net.thep2wking.badores.util.events.ModEventHandler;
 import net.thep2wking.badores.util.proxy.CommonProxy;
+import net.thep2wking.badores.util.worldgen.ModWorldGen;
 
 @Mod(modid = BadOres.MODID, name = BadOres.NAME, version = BadOres.VERSION, dependencies = BadOres.DEPENDENCIES)
 public class BadOres {
@@ -64,6 +63,7 @@ public class BadOres {
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
         ModEntities.registerEntities();
+        ModWorldGen.registerModWorldGen();
         PROXY.preInit(event);
     }
 

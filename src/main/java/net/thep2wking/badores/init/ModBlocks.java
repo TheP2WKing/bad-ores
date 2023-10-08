@@ -58,7 +58,7 @@ public class ModBlocks {
 	public static final Block MOVIUM = new BlockMovium(BadOres.MODID, "movium", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 	public static final Block BALANCIUM = new BlockBalancium(BadOres.MODID, "balancium", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 	public static final Block EXPLODEITMITE = new BlockExplodeitmite(BadOres.MODID, "explodeitmite", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 10.0f, 10.0f, 0);
-	public static final Block MARMITE = new ModBlockOreBase(BadOres.MODID, "marmite", BadOres.TAB, 0, 0, Material.ROCK, SoundType.GROUND, MapColor.CLAY, 0, ModToolTypes.SHOVEL, 1.5f, 1.5f, 0);
+	public static final Block MARMITE = new ModBlockOreBase(BadOres.MODID, "marmite", BadOres.TAB, 0, 0, Material.GROUND, SoundType.GROUND, MapColor.CLAY, 0, ModToolTypes.SHOVEL, 1.5f, 1.5f, 0);
 	public static final Block SHIFTIUM = new BlockShiftium(BadOres.MODID, "shiftium", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 	public static final Block WANTARITE = new BlockWantarite(BadOres.MODID, "wantarite", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 	public static final Block IDLIKEABITE = new BlockIdlikeabite(BadOres.MODID, "idlikeabite", BadOres.TAB, 0, 0, Material.GOURD, SoundType.GROUND, MapColor.DIRT, 0, ModToolTypes.SHOVEL, 1.5f, 1.5f, 0);

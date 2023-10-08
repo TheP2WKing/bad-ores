@@ -53,8 +53,9 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	}
 
 	public static void setBlockSafe(World world, int x, int y, int z, Block block) {
-		if (world.getBlockState(new BlockPos(x, y, z)).getBlockHardness(world, new BlockPos(x, y, z)) >= 0f)
+		if (world.getBlockState(new BlockPos(x, y, z)).getBlockHardness(world, new BlockPos(x, y, z)) >= 0f) {
 			world.setBlockState(new BlockPos(x, y, z), block.getDefaultState(), 3);
+		}
 	}
 
 	@Override

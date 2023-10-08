@@ -1,4 +1,4 @@
-package net.thep2wking.badores.util;
+package net.thep2wking.badores.util.events;
 
 import java.util.Random;
 

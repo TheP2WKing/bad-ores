@@ -24,12 +24,11 @@ public class BlockKakkarite extends ModBlockOreBase {
 	@Override
 	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state,
 			int fortune) {
-				int items = 9001;
-				while (items > 0) {
-					ItemStack stack = new ItemStack(ModItems.KAKKARITE_GEMSTONE);
-					items -= stack.getMaxStackSize();
-					drops.add(stack);
-				}
-
+		int items = 9001;
+		while (items > 0) {
+			ItemStack stack = new ItemStack(ModItems.KAKKARITE_GEMSTONE, 64);
+			items -= stack.getMaxStackSize();
+			drops.add(stack);
+		}
 	}
 }

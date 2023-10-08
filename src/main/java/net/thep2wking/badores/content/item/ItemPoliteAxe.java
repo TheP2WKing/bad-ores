@@ -9,7 +9,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.badores.util.ModItemEvents;
+import net.thep2wking.badores.util.events.ModItemEvents;
 import net.thep2wking.reloadedlib.api.tool.ModItemAxeBase;
 
 public class ItemPoliteAxe extends ModItemAxeBase {

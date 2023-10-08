@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.thep2wking.badores.util.ModItemEvents;
+import net.thep2wking.badores.util.events.ModItemEvents;
 import net.thep2wking.reloadedlib.api.armor.ModItemArmorBase;
 
 public class ItemEnderiteArmor extends ModItemArmorBase {

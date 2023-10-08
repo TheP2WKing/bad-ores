@@ -13,7 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.badores.util.ModEventHandler;
+import net.thep2wking.badores.util.events.ModEventHandler;
 import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
 import net.thep2wking.reloadedlib.util.ModToolTypes;
 

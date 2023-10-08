@@ -79,7 +79,8 @@ public class BlockGhostium extends ModBlockOreBase {
 			double d0 = (double) (worldIn.rand.nextFloat() * 0.5F) + 0.25D;
 			double d1 = (double) (worldIn.rand.nextFloat() * 0.5F) + 0.25D;
 			double d2 = (double) (worldIn.rand.nextFloat() * 0.5F) + 0.25D;
-			EntityItem entityitem = new EntityItem(worldIn, (double) pos.getX() + d0, (double) pos.getY() + d1, (double) pos.getZ() + d2, stack);
+			EntityItem entityitem = new EntityItem(worldIn, (double) pos.getX() + d0, (double) pos.getY() + d1,
+					(double) pos.getZ() + d2, stack);
 			entityitem.setPickupDelay(Integer.MAX_VALUE);
 			worldIn.spawnEntity(entityitem);
 		}

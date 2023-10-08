@@ -24,14 +24,14 @@ public class BlockExplodeitmite extends ModBlockOreBase {
 
 	@Override
 	public int tickRate(World worldIn) {
-		return 10000;
+		return 15000;
 	}
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
 		Random random = new Random();
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
-			if (random.nextInt(4) == 0) {
+			if (random.nextInt(5) == 0) {
 				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
 						2.0f + random.nextFloat() * 3.0f, false, true);
 			}
@@ -41,7 +41,7 @@ public class BlockExplodeitmite extends ModBlockOreBase {
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
 		if (!worldIn.isRemote) {
-			if (random.nextInt(4) == 0) {
+			if (random.nextInt(5) == 0) {
 				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
 						2.0f + random.nextFloat() * 3.0f, false, true);
 				worldIn.setBlockToAir(new BlockPos(pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ()));
