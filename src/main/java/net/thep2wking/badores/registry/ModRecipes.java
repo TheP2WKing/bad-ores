@@ -33,7 +33,7 @@ public class ModRecipes {
 		ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(ModItems.CRASHIUM_GEMSTONE, 1, 0), "oreCrashium", 1.0f);
 		ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(ModItems.SMITE_GEMSTONE, 1, 0), "oreSmite", 1.0f);
 		ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(ModItems.DIAMOND, 1, 0), "oreDiamondFake", 1.0f);
-		ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(ModItems.KAKKARITE_GEMSTONE, 64, 0), "oreKakkarite",
+		ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(ModItems.KAKKARITE_GEMSTONE, 16, 0), "oreKakkarite",
 				0.1f);
 
 		ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(Items.IRON_SWORD, 1, 0), "oreWannafite", 0.7f);
