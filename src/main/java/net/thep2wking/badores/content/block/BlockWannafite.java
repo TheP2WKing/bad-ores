@@ -18,8 +18,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockWannafite extends ModBlockOreBase {
 	public static final DamageSource DAMAGE_SOURCE = new DamageSource(BadOres.MODID + ".wannafite");
@@ -33,7 +34,7 @@ public class BlockWannafite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!player.capabilities.isCreativeMode
+		if (!player.capabilities.isCreativeMode && BadOresConfig.EVENTS.WANNAFITE_MINING_DAMAGE
 				&& EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) != 1) {
 			player.attackEntityFrom(DAMAGE_SOURCE, 6);
 		}

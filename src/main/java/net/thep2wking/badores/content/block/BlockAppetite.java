@@ -13,8 +13,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockAppetite extends ModBlockOreBase {
 	public BlockAppetite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -26,7 +27,7 @@ public class BlockAppetite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!worldIn.isRemote
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.APPEITTE_RESTORES_HUNGER
 				&& EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) != 1) {
 			player.getFoodStats().addStats(6, 0.5f);
 		}

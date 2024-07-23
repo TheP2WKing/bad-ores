@@ -9,9 +9,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.thep2wking.badores.config.BadOresConfig;
 import net.thep2wking.badores.init.ModItems;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockKakkarite extends ModBlockOreBase {
 	public BlockKakkarite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -24,11 +25,15 @@ public class BlockKakkarite extends ModBlockOreBase {
 	@Override
 	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state,
 			int fortune) {
-		int items = 9001;
-		while (items > 0) {
-			ItemStack stack = new ItemStack(ModItems.KAKKARITE_GEMSTONE, 64);
-			items -= stack.getMaxStackSize();
-			drops.add(stack);
+		ItemStack stack;
+		if (BadOresConfig.EVENTS.KAKKARITE_DROPS_SHIT) {
+			for (int items = BadOresConfig.EVENTS.KAKKARITE_DROP_COUNT; items > 0; items -= stack.getMaxStackSize()) {
+				stack = new ItemStack(ModItems.KAKKARITE_GEMSTONE);
+				stack.setCount(Math.min(64, items));
+				drops.add(stack);
+			}
+		} else {
+			drops.add(new ItemStack(ModItems.KAKKARITE_GEMSTONE, 1, 0));
 		}
 	}
 }

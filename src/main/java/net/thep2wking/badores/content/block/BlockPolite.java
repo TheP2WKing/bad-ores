@@ -13,8 +13,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockPolite extends ModBlockOreBase {
 	public BlockPolite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -27,7 +28,7 @@ public class BlockPolite extends ModBlockOreBase {
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
 		int message = new Random().nextInt(16);
-		if (!worldIn.isRemote) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.POLITE_CHAT_MESSAGES) {
 			player.sendMessage(
 					new TextComponentString(I18n.format("tile." + BadOres.MODID + ".polite.mined." + message)));
 		}

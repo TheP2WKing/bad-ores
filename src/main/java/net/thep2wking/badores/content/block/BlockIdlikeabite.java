@@ -10,8 +10,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockIdlikeabite extends ModBlockOreBase {
 	public BlockIdlikeabite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -23,7 +24,7 @@ public class BlockIdlikeabite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.IDLIKEABITE_DECREASES_HUNGER) {
 			Random random = new Random();
 			player.getFoodStats().addExhaustion(random.nextFloat() * 40.0f);
 		}

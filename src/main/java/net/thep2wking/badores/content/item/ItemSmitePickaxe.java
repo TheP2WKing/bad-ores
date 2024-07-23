@@ -10,12 +10,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.thep2wking.badores.util.events.ModItemEvents;
-import net.thep2wking.reloadedlib.api.tool.ModItemPickaxeBase;
+import net.thep2wking.oedldoedlcore.api.tool.ModItemPickaxeBase;
 
 public class ItemSmitePickaxe extends ModItemPickaxeBase {
 	public ItemSmitePickaxe(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
-			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines) {
-		super(modid, name, tab, material, attackDamage, attackSpeed, rarity, hasEffect, tooltipLines);
+			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+		super(modid, name, tab, material, attackDamage, attackSpeed, rarity, hasEffect, tooltipLines, annotationLines);
 	}
 
 	@Override

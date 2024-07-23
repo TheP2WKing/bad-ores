@@ -13,16 +13,20 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 import java.awt.Desktop;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class BlockWebsite extends ModBlockOreBase {
+	public final List<String> WEBSITE_URLS = new ArrayList<>(Arrays.asList(BadOresConfig.EVENTS.WEBSITE_POSSIBLE_URLS));
+	
 	public BlockWebsite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
 			SoundType sound, MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness,
 			float resistance, int lightLevel) {
@@ -30,18 +34,10 @@ public class BlockWebsite extends ModBlockOreBase {
 				lightLevel);
 	}
 
-	public static final List<String> WEBSITE_URLS = Arrays.asList(
-			"https://www.google.com",
-			"https://www.minecraft.net",
-			"https://forums.minecraftforge.net",
-			"https://minecraft.wiki",
-			"https://www.minecraftforge.net",
-			"https://www.curseforge.com",
-			"https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode
+				&& BadOresConfig.EVENTS.WEBSITE_OPENS_RANDOM_WEBSITES) {
 			openRandomWebsite(player);
 		}
 	}

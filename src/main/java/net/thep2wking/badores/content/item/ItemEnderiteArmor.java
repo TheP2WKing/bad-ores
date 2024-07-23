@@ -10,12 +10,12 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.thep2wking.badores.util.events.ModItemEvents;
-import net.thep2wking.reloadedlib.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 
 public class ItemEnderiteArmor extends ModItemArmorBase {
 	public ItemEnderiteArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines) {
-		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines);
+			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

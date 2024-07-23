@@ -2,7 +2,7 @@ package net.thep2wking.badores.init;
 
 import net.minecraft.util.SoundEvent;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.reloadedlib.api.sound.ModSoundEventBase;
+import net.thep2wking.oedldoedlcore.api.sound.ModSoundEventBase;
 
 public class ModSounds {
 	public static final SoundEvent NOSLEEPTONITE_BLOCK = new ModSoundEventBase(BadOres.MODID, "nosleeptonite_block");

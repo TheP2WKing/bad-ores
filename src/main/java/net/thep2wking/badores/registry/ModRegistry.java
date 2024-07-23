@@ -5,64 +5,64 @@ import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.thep2wking.reloadedlib.util.ModLogger;
-import net.thep2wking.reloadedlib.util.ModRegistryHelper;
+import net.thep2wking.oedldoedlcore.util.ModLogger;
+import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.badores.content.entities.EntityFleesonsite;
-import net.thep2wking.badores.content.entities.EntityNosleeptonite;
 import net.thep2wking.badores.init.ModBlocks;
 import net.thep2wking.badores.init.ModItems;
 import net.thep2wking.badores.init.ModSounds;
-import net.thep2wking.badores.util.render.RenderFleesonsite;
-import net.thep2wking.badores.util.render.RenderNosleeptonite;
 
 @Mod.EventBusSubscriber
 public class ModRegistry {
 	@SubscribeEvent
+	public static void onModelRegister(ModelRegistryEvent event) {
+		ModRegistryHelper.registerModels(event, BadOres.MODID);
+	}
+
+	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
 		ModLogger.registeredBlocksLogger(BadOres.MODID);
 
-		ModRegistryHelper.registerBlock(event, ModBlocks.POLITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.WANNAFITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.BREAKIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.STONIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.CRAPPIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.ENDERITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.WEBSITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.LITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.MISLEADIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.GHOSTIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.AMADEUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.BARELYGENERITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.UNOBTAINIUM);
+		ModRegistryHelper.registerBlock(event, ModBlocks.POLITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.WANNAFITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.BREAKIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.STONIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.CRAPPIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.ENDERITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.WEBSITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.LITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.MISLEADIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.GHOSTIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.AMADEUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.BARELYGENERITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.UNOBTAINIUM_ORE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.COPPER_ORE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.USELESSIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.KILLIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.MOVIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.BALANCIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.EXPLODEITMITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.MARMITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.SHIFTIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.WANTARITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.IDLIKEABITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.METEORITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.STREETSCUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.FLEESONSITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.NOPIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.ZOMBIEUNITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.PAINTITWHITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.IWONTFITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.TAUNTUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.PANDAEMONIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.NOSLEEPTONITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.APPETITE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.CRASHIUM);
-		ModRegistryHelper.registerBlock(event, ModBlocks.SMITE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.USELESSIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.KILLIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.MOVIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.BALANCIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.EXPLODEITMITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.MARMITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.SHIFTIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.WANTARITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.IDLIKEABITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.METEORITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.STREETSCUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.FLEESONSITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.NOPIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.ZOMBIEUNITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.PAINTITWHITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.IWONTFITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.TAUNTUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.PANDAEMONIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.NOSLEEPTONITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.APPETITE_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.CRASHIUM_ORE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.SMITE_ORE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.DIAMOND_ORE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.KAKKARITE);
+		ModRegistryHelper.registerBlock(event, ModBlocks.KAKKARITE_ORE);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.POLITE_BLOCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.CRAPPIUM_BLOCK);
@@ -261,11 +261,5 @@ public class ModRegistry {
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.FLEESONSITE_DEATH);
 
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.PANDAEMONIUM_MINE);
-	}
-
-	@SubscribeEvent
-	public static void onSoundModelRegister(ModelRegistryEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(EntityFleesonsite.class, RenderFleesonsite.FACTORY);
-		RenderingRegistry.registerEntityRenderingHandler(EntityNosleeptonite.class, RenderNosleeptonite.FACTORY);
 	}
 }

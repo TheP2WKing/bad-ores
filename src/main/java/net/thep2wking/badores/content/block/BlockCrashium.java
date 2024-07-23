@@ -13,9 +13,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
+import net.thep2wking.badores.config.BadOresConfig;
 import net.thep2wking.badores.util.events.ModEventHandler;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockCrashium extends ModBlockOreBase {
 	public BlockCrashium(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -27,7 +28,7 @@ public class BlockCrashium extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!player.capabilities.isCreativeMode) {
+		if (!player.capabilities.isCreativeMode && BadOresConfig.EVENTS.CRASHIUM_CAN_CRASH_GAME) {
 			doCrash(player, worldIn);
 		}
 	}

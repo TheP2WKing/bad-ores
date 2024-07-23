@@ -18,8 +18,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.ForgeEventFactory;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockGhostium extends ModBlockOreBase {
 	public BlockGhostium(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -33,9 +34,9 @@ public class BlockGhostium extends ModBlockOreBase {
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state,
 			@Nullable TileEntity te, ItemStack stack) {
 		player.addStat(StatList.getBlockStats(this));
-		player.addExhaustion(0.005F);
 		if (this.canSilkHarvest(worldIn, pos, state, player)
-				&& EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
+				&& EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0
+				&& BadOresConfig.EVENTS.GHOSTIUM_NOT_COLLECTABLE) {
 			List<ItemStack> items = new java.util.ArrayList<ItemStack>();
 			ItemStack itemstack = this.getSilkTouchDrop(state);
 			if (!itemstack.isEmpty()) {
@@ -57,7 +58,7 @@ public class BlockGhostium extends ModBlockOreBase {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune) {
-		if (!worldIn.isRemote && !worldIn.restoringBlockSnapshots) {
+		if (!worldIn.isRemote && !worldIn.restoringBlockSnapshots && BadOresConfig.EVENTS.GHOSTIUM_NOT_COLLECTABLE) {
 			List<ItemStack> drops = getDrops(worldIn, pos, state, fortune);
 			chance = ForgeEventFactory.fireBlockHarvesting(drops, worldIn, pos, state, fortune, chance, false,
 					harvesters.get());
@@ -66,6 +67,8 @@ public class BlockGhostium extends ModBlockOreBase {
 					spawnAsGhostEntity(worldIn, pos, drop);
 				}
 			}
+		} else {
+			super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
 		}
 	}
 
@@ -85,5 +88,4 @@ public class BlockGhostium extends ModBlockOreBase {
 			worldIn.spawnEntity(entityitem);
 		}
 	}
-
 }

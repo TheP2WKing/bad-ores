@@ -7,12 +7,12 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.thep2wking.badores.util.events.ModItemEvents;
-import net.thep2wking.reloadedlib.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 
 public class ItemSmiteArmor extends ModItemArmorBase {
 	public ItemSmiteArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines) {
-		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines);
+			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
 	}
 
 	@Override

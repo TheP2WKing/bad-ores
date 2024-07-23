@@ -15,8 +15,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModRandomUtil;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockBalancium extends ModBlockOreBase {
 	public static final List<Item> DROPS = Arrays.asList(Items.COAL, Items.IRON_INGOT, Items.GOLD_INGOT, Items.DIAMOND,
@@ -34,13 +36,11 @@ public class BlockBalancium extends ModBlockOreBase {
 			int fortune) {
 		Random random = new Random();
 		int num = random.nextInt(50) + 5;
-		for (int i = 0; i < num; i++) {
-			Item item = selectRandom(random, DROPS);
-			drops.add(new ItemStack(item, 1));
+		if (BadOresConfig.EVENTS.BALANCIUM_DROPS_RESOURCES) {
+			for (int i = 0; i < num; i++) {
+				Item item = ModRandomUtil.selectRandom(random, DROPS);
+				drops.add(new ItemStack(item, 1));
+			}
 		}
-	}
-
-	public static <T> T selectRandom(Random r, List<T> list) {
-		return list.get(r.nextInt(list.size()));
 	}
 }

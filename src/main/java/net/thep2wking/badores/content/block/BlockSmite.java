@@ -11,8 +11,9 @@ import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockSmite extends ModBlockOreBase {
 	public BlockSmite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -25,7 +26,8 @@ public class BlockSmite extends ModBlockOreBase {
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
 		Random random = new Random();
-		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode
+				&& BadOresConfig.EVENTS.SMITE_CAN_SPAWN_LIGHTNING_BOLT) {
 			if (random.nextInt(3) == 0) {
 				worldIn.addWeatherEffect(
 						new EntityLightningBolt(worldIn, player.posX, player.posY, player.posZ, false));

@@ -12,8 +12,9 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockTauntum extends ModBlockOreBase {
 	public BlockTauntum(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -31,7 +32,7 @@ public class BlockTauntum extends ModBlockOreBase {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
-		if (!worldIn.isRemote) {
+		if (!worldIn.isRemote && BadOresConfig.EVENTS.TAUNTUM_SOUNDS) {
 			playRandomSound(worldIn, pos.getX(), pos.getY(), pos.getZ(), random);
 		}
 	}

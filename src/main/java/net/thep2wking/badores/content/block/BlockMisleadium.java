@@ -1,6 +1,5 @@
 package net.thep2wking.badores.content.block;
 
-import java.util.List;
 import java.util.Random;
 
 import com.google.common.collect.Iterables;
@@ -18,8 +17,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModRandomUtil;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockMisleadium extends ModBlockOreBase {
 	public BlockMisleadium(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -31,7 +32,7 @@ public class BlockMisleadium extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!worldIn.isRemote) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.MISLEADIUM_CHAT_MESSAGES) {
 			int numItems = Item.REGISTRY.getKeys().size();
 			Item item;
 			int sideRange = 500;
@@ -45,7 +46,7 @@ public class BlockMisleadium extends ModBlockOreBase {
 				} while (item.getCreativeTab() == null);
 				item.getSubItems(CreativeTabs.SEARCH, cache);
 			} while (cache.isEmpty());
-			ItemStack stack = selectRandom(random, cache);
+			ItemStack stack = ModRandomUtil.selectRandom(random, cache);
 			int fX = (pos.getX() + random.nextInt(sideRange) - random.nextInt(sideRange));
 			int fY = (random.nextInt(100) + 10);
 			int fZ = (pos.getY() + random.nextInt(sideRange) - random.nextInt(sideRange));
@@ -59,9 +60,5 @@ public class BlockMisleadium extends ModBlockOreBase {
 										Integer.toString(fZ))));
 			}
 		}
-	}
-
-	public static <T> T selectRandom(Random r, List<T> list) {
-		return list.get(r.nextInt(list.size()));
 	}
 }

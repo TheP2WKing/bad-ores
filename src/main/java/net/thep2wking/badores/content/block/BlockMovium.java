@@ -1,7 +1,6 @@
 package net.thep2wking.badores.content.block;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.SoundType;
@@ -16,8 +15,10 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModRandomUtil;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockMovium extends ModBlockOreBase {
 	public BlockMovium(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -31,7 +32,7 @@ public class BlockMovium extends ModBlockOreBase {
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
 		Random random = new Random();
 		EnumFacing dir = selectRandom(random, EnumFacing.VALUES);
-		if (!player.capabilities.isCreativeMode && !worldIn.isRemote) {
+		if (!player.capabilities.isCreativeMode && !worldIn.isRemote && BadOresConfig.EVENTS.MOVIUM_MOVEMENT) {
 			int tX = pos.getX() + dir.getFrontOffsetX();
 			int tY = pos.getY() + dir.getFrontOffsetY();
 			int tZ = pos.getZ() + dir.getFrontOffsetZ();
@@ -40,13 +41,9 @@ public class BlockMovium extends ModBlockOreBase {
 		}
 	}
 
-	public static <T> T selectRandom(Random r, List<T> list) {
-		return list.get(r.nextInt(list.size()));
-	}
-
 	@SuppressWarnings("all")
 	public static <T> T selectRandom(Random r, T... list) {
-		return selectRandom(r, Arrays.asList(list));
+		return ModRandomUtil.selectRandom(r, Arrays.asList(list));
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package net.thep2wking.badores.content.itemblock;
 
-import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -11,17 +10,20 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.item.ModItemBlockBase;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.item.ModItemBlockBase;
+import net.thep2wking.oedldoedlcore.util.ModRandomUtil;
 
 public class ItemBlockFleesonsite extends ModItemBlockBase {
-	public ItemBlockFleesonsite(Block block, EnumRarity rarity, boolean hasEffect, int tooltipLines) {
-		super(block, rarity, hasEffect, tooltipLines);
+	public ItemBlockFleesonsite(Block block, EnumRarity rarity, boolean hasEffect, int tooltipLines,
+			int annotationLines) {
+		super(block, rarity, hasEffect, tooltipLines, annotationLines);
 	}
 
 	@Override
 	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
 		EntityPlayer player = (EntityPlayer) entityIn;
-		if (!player.capabilities.isCreativeMode && !worldIn.isRemote) {
+		if (!player.capabilities.isCreativeMode && !worldIn.isRemote && BadOresConfig.EVENTS.FLEESONSITE_JUMPING) {
 			jumpRandomly(player.inventoryContainer,
 					player.inventoryContainer.getSlotFromInventory(player.inventory, itemSlot));
 		}
@@ -34,7 +36,7 @@ public class ItemBlockFleesonsite extends ModItemBlockBase {
 			Slot targetSlot;
 			int count = 0;
 			do {
-				targetSlot = (Slot) selectRandom(random, c.inventorySlots);
+				targetSlot = (Slot) ModRandomUtil.selectRandom(random, c.inventorySlots);
 				if (++count == 15) {
 					return;
 				}
@@ -42,9 +44,5 @@ public class ItemBlockFleesonsite extends ModItemBlockBase {
 			slot.putStack(ItemStack.EMPTY);
 			targetSlot.putStack(stack);
 		}
-	}
-
-	public static <T> T selectRandom(Random r, List<T> list) {
-		return list.get(r.nextInt(list.size()));
 	}
 }

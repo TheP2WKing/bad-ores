@@ -22,14 +22,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.thep2wking.badores.config.BadOresConfig;
 import net.thep2wking.badores.init.ModSounds;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModRandomUtil;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockPandaemonium extends ModBlockOreBase {
 	public final List<Item> ITEMS = Arrays.asList(Item.getItemFromBlock(Blocks.NETHERRACK),
-			Item.getItemFromBlock(Blocks.SOUL_SAND), Item.getItemFromBlock(Blocks.NETHER_WART),
-			Item.getItemFromBlock(Blocks.OBSIDIAN), Items.FIRE_CHARGE, Items.BLAZE_ROD, Items.MAGMA_CREAM);
+			Item.getItemFromBlock(Blocks.SOUL_SAND), Item.getItemFromBlock(Blocks.OBSIDIAN), Items.FIRE_CHARGE,
+			Items.BLAZE_ROD, Items.MAGMA_CREAM, Items.NETHER_WART);
 
 	public BlockPandaemonium(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
 			SoundType sound, MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness,
@@ -46,7 +48,7 @@ public class BlockPandaemonium extends ModBlockOreBase {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
-		if (!worldIn.isRemote && random.nextInt(10) == 0) {
+		if (!worldIn.isRemote && random.nextInt(10) == 0 && BadOresConfig.EVENTS.PANDAEMONIUM_SOUNDS) {
 			worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), ModSounds.PANDAEMONIUM_MINE,
 					SoundCategory.BLOCKS, 1.0F, 1.0f);
 		}
@@ -59,10 +61,13 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	}
 
 	@Override
-	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!worldIn.isRemote) {
+	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state,
+			EntityPlayer player) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode
+				&& BadOresConfig.EVENTS.PANDAEMONIUM_SPAWNS_BLOCKS) {
 			Random random = new Random();
-			worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), ModSounds.PANDAEMONIUM_MINE,
+			worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(),
+					ModSounds.PANDAEMONIUM_MINE,
 					SoundCategory.BLOCKS, 1.0F, 1.0f);
 			int pigmen = random.nextInt(4);
 			for (int i = 0; i < pigmen; i++) {
@@ -80,7 +85,8 @@ public class BlockPandaemonium extends ModBlockOreBase {
 					float curX = pos.getX() + 0.5f + xP * iteration;
 					float curY = pos.getY() + 0.5f + yP * iteration;
 					float curZ = pos.getZ() + 0.5f + zP * iteration;
-					setBlockSafe(worldIn, MathHelper.floor(curX), MathHelper.floor(curY), MathHelper.floor(curZ),
+					setBlockSafe(worldIn, MathHelper.floor(curX), MathHelper.floor(curY),
+							MathHelper.floor(curZ),
 							Blocks.NETHERRACK);
 				}
 			}
@@ -92,7 +98,8 @@ public class BlockPandaemonium extends ModBlockOreBase {
 						if (random.nextFloat() < fireChance) {
 							if (Blocks.FIRE.canPlaceBlockAt(worldIn,
 									new BlockPos(pos.getX() + xP, pos.getY() + yP, pos.getZ() + zP)))
-								setBlockSafe(worldIn, pos.getX() + xP, pos.getY() + yP, pos.getZ() + zP, Blocks.FIRE);
+								setBlockSafe(worldIn, pos.getX() + xP, pos.getY() + yP, pos.getZ() + zP,
+										Blocks.FIRE);
 						}
 					}
 		}
@@ -101,15 +108,13 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	@Override
 	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state,
 			int fortune) {
-		Random random = new Random();
-		int num = random.nextInt(3);
-		for (int i = 0; i < num; i++) {
-			Item item = selectRandom(random, ITEMS);
-			drops.add(new ItemStack(item, random.nextInt(5)));
+		if (BadOresConfig.EVENTS.PANDAEMONIUM_DROPS_RESOURCES) {
+			Random random = new Random();
+			int num = random.nextInt(3);
+			for (int i = 0; i < num; i++) {
+				Item item = ModRandomUtil.selectRandom(random, ITEMS);
+				drops.add(new ItemStack(item, random.nextInt(5)));
+			}
 		}
-	}
-
-	public static <T> T selectRandom(Random r, List<T> list) {
-		return list.get(r.nextInt(list.size()));
 	}
 }

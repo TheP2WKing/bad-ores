@@ -13,8 +13,9 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockEnderite extends ModBlockOreBase {
 	public BlockEnderite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -26,7 +27,7 @@ public class BlockEnderite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.ENDERITE_TELEPORTATION) {
 			teleportTo(worldIn, player, findRandomSpot(worldIn, pos.getX(), pos.getY(), pos.getZ()));
 		}
 	}

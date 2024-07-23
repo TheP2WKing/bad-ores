@@ -12,8 +12,9 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockAmadeum extends ModBlockOreBase {
 	public BlockAmadeum(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -26,7 +27,9 @@ public class BlockAmadeum extends ModBlockOreBase {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
-		randomSound(worldIn, pos.getX(), pos.getY(), pos.getZ(), random);
+		if (BadOresConfig.EVENTS.AMADEUM_SOUNDS) {
+			randomSound(worldIn, pos.getX(), pos.getY(), pos.getZ(), random);
+		}
 	}
 
 	@Override

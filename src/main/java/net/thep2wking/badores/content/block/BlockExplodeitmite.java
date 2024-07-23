@@ -10,8 +10,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockExplodeitmite extends ModBlockOreBase {
 	public BlockExplodeitmite(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
@@ -30,20 +31,20 @@ public class BlockExplodeitmite extends ModBlockOreBase {
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
 		Random random = new Random();
-		if (!worldIn.isRemote && !player.capabilities.isCreativeMode) {
+		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSIONS) {
 			if (random.nextInt(5) == 0) {
 				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
-						2.0f + random.nextFloat() * 3.0f, false, true);
+						2.0f + random.nextFloat() * 2.0f, false, BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSION_DAMAGE);
 			}
 		}
 	}
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
-		if (!worldIn.isRemote) {
+		if (!worldIn.isRemote && BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSIONS) {
 			if (random.nextInt(5) == 0) {
 				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
-						2.0f + random.nextFloat() * 3.0f, false, true);
+						2.0f + random.nextFloat() * 2.0f, false, BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSION_DAMAGE);
 				worldIn.setBlockToAir(new BlockPos(pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ()));
 			}
 		}

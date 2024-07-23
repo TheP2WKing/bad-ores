@@ -12,8 +12,9 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.reloadedlib.api.block.ModBlockOreBase;
-import net.thep2wking.reloadedlib.util.ModToolTypes;
+import net.thep2wking.badores.config.BadOresConfig;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockKillium extends ModBlockOreBase {
 	public static final DamageSource DAMAGE_SOURCE = new DamageSource(BadOres.MODID + ".killium")
@@ -29,7 +30,7 @@ public class BlockKillium extends ModBlockOreBase {
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
 		Random random = new Random();
-		if (!player.capabilities.isCreativeMode) {
+		if (!player.capabilities.isCreativeMode && BadOresConfig.EVENTS.KILLIUM_CAN_KILL_PLAYERS) {
 			if (random.nextInt(5) == 0) {
 				player.attackEntityFrom(DAMAGE_SOURCE, Integer.MAX_VALUE);
 			}
