@@ -7,8 +7,9 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.thep2wking.badores.BadOres;
+import net.thep2wking.badores.config.BadOresConfig;
 import net.thep2wking.badores.init.ModBlocks;
-import net.thep2wking.reloadedlib.util.ModLogger;
+import net.thep2wking.oedldoedlcore.util.ModLogger;
 
 @mezz.jei.api.JEIPlugin
 public class BadOresJEIPlugin implements IModPlugin {
@@ -18,49 +19,51 @@ public class BadOresJEIPlugin implements IModPlugin {
 			ModLogger.registeredIntegration("JEI", BadOres.MODID);
 		}
 
-		addDesc(registry, ModBlocks.POLITE, "polite");
-		addDesc(registry, ModBlocks.WANNAFITE, "wannafite");
-		addDesc(registry, ModBlocks.BREAKIUM, "breakium");
-		addDesc(registry, ModBlocks.CRASHIUM, "crashium");
-		addDesc(registry, ModBlocks.STONIUM, "stonium");
-		addDesc(registry, ModBlocks.CRAPPIUM, "crappium");
-		addDesc(registry, ModBlocks.ENDERITE, "enderite");
-		addDesc(registry, ModBlocks.WEBSITE, "website");
-		addDesc(registry, ModBlocks.LITE, "lite");
-		addDesc(registry, ModBlocks.MISLEADIUM, "misleadium");
-		addDesc(registry, ModBlocks.GHOSTIUM, "ghostium");
-		addDesc(registry, ModBlocks.AMADEUM, "amadeum");
-		addDesc(registry, ModBlocks.BARELYGENERITE, "barelygenerite");
-		addDesc(registry, ModBlocks.UNOBTAINIUM, "unobtainium");
+		addDesc(registry, ModBlocks.POLITE_ORE, "polite");
+		addDesc(registry, ModBlocks.WANNAFITE_ORE, "wannafite");
+		addDesc(registry, ModBlocks.BREAKIUM_ORE, "breakium");
+		addDesc(registry, ModBlocks.CRASHIUM_ORE, "crashium");
+		addDesc(registry, ModBlocks.STONIUM_ORE, "stonium");
+		addDesc(registry, ModBlocks.CRAPPIUM_ORE, "crappium");
+		addDesc(registry, ModBlocks.ENDERITE_ORE, "enderite");
+		addDesc(registry, ModBlocks.WEBSITE_ORE, "website");
+		addDesc(registry, ModBlocks.LITE_ORE, "lite");
+		addDesc(registry, ModBlocks.MISLEADIUM_ORE, "misleadium");
+		addDesc(registry, ModBlocks.GHOSTIUM_ORE, "ghostium");
+		addDesc(registry, ModBlocks.AMADEUM_ORE, "amadeum");
+		addDesc(registry, ModBlocks.BARELYGENERITE_ORE, "barelygenerite");
+		addDesc(registry, ModBlocks.UNOBTAINIUM_ORE, "unobtainium");
 		addDesc(registry, ModBlocks.COPPER_ORE, "copper_ore");
-		addDesc(registry, ModBlocks.USELESSIUM, "uselessium");
-		addDesc(registry, ModBlocks.KILLIUM, "killium");
-		addDesc(registry, ModBlocks.MOVIUM, "movium");
-		addDesc(registry, ModBlocks.BALANCIUM, "balancium");
-		addDesc(registry, ModBlocks.EXPLODEITMITE, "explodeitmite");
-		addDesc(registry, ModBlocks.MARMITE, "marmite");
-		addDesc(registry, ModBlocks.SHIFTIUM, "shiftium");
-		addDesc(registry, ModBlocks.SMITE, "smite");
-		addDesc(registry, ModBlocks.WANTARITE, "wantarite");
-		addDesc(registry, ModBlocks.IDLIKEABITE, "idlikeabite");
-		addDesc(registry, ModBlocks.METEORITE, "meteorite");
-		addDesc(registry, ModBlocks.STREETSCUM, "streetscum");
-		addDesc(registry, ModBlocks.FLEESONSITE, "fleesonsite");
-		addDesc(registry, ModBlocks.NOPIUM, "nopium");
-		addDesc(registry, ModBlocks.ZOMBIEUNITE, "zombieunite");
-		addDesc(registry, ModBlocks.PAINTITWHITE, "paintitwhite");
-		addDesc(registry, ModBlocks.IWONTFITE, "iwontfite");
+		addDesc(registry, ModBlocks.USELESSIUM_ORE, "uselessium");
+		addDesc(registry, ModBlocks.KILLIUM_ORE, "killium");
+		addDesc(registry, ModBlocks.MOVIUM_ORE, "movium");
+		addDesc(registry, ModBlocks.BALANCIUM_ORE, "balancium");
+		addDesc(registry, ModBlocks.EXPLODEITMITE_ORE, "explodeitmite");
+		addDesc(registry, ModBlocks.MARMITE_ORE, "marmite");
+		addDesc(registry, ModBlocks.SHIFTIUM_ORE, "shiftium");
+		addDesc(registry, ModBlocks.SMITE_ORE, "smite");
+		addDesc(registry, ModBlocks.WANTARITE_ORE, "wantarite");
+		addDesc(registry, ModBlocks.IDLIKEABITE_ORE, "idlikeabite");
+		addDesc(registry, ModBlocks.METEORITE_ORE, "meteorite");
+		addDesc(registry, ModBlocks.STREETSCUM_ORE, "streetscum");
+		addDesc(registry, ModBlocks.FLEESONSITE_ORE, "fleesonsite");
+		addDesc(registry, ModBlocks.NOPIUM_ORE, "nopium");
+		addDesc(registry, ModBlocks.ZOMBIEUNITE_ORE, "zombieunite");
+		addDesc(registry, ModBlocks.PAINTITWHITE_ORE, "paintitwhite");
+		addDesc(registry, ModBlocks.IWONTFITE_ORE, "iwontfite");
 		addDesc(registry, ModBlocks.DIAMOND_ORE, "diamond_ore");
-		addDesc(registry, ModBlocks.TAUNTUM, "tauntum");
-		addDesc(registry, ModBlocks.KAKKARITE, "kakkarite");
-		addDesc(registry, ModBlocks.PANDAEMONIUM, "pandaemonium");
-		addDesc(registry, ModBlocks.NOSLEEPTONITE, "nosleeptonite");
-		addDesc(registry, ModBlocks.APPETITE, "appetite");
+		addDesc(registry, ModBlocks.TAUNTUM_ORE, "tauntum");
+		addDesc(registry, ModBlocks.KAKKARITE_ORE, "kakkarite");
+		addDesc(registry, ModBlocks.PANDAEMONIUM_ORE, "pandaemonium");
+		addDesc(registry, ModBlocks.NOSLEEPTONITE_ORE, "nosleeptonite");
+		addDesc(registry, ModBlocks.APPETITE_ORE, "appetite");
 	}
 
 	@SuppressWarnings("deprecation")
 	public static void addDesc(IModRegistry registry, Block block, String name) {
-		registry.addIngredientInfo(new ItemStack(block), ItemStack.class,
-				I18n.format("tile." + BadOres.MODID + "." + name + ".jei"));
+		if (BadOresConfig.INTEGRATION.JEI_INTEGRATION) {
+			registry.addIngredientInfo(new ItemStack(block), ItemStack.class,
+					I18n.format("tile." + BadOres.MODID + "." + name + ".jei"));
+		}
 	}
 }
