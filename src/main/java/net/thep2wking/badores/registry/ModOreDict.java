@@ -79,15 +79,5 @@ public class ModOreDict {
 		ModRecipeHelper.addOreDict("gemDiamondFake", ModItems.DIAMOND, 0);
 		ModRecipeHelper.addOreDict("gemKakkarite", ModItems.KAKKARITE_GEMSTONE, 0);
 		ModRecipeHelper.addOreDict("ingotNosleeptonite", ModItems.NOSLEEPTONITE_INGOT, 0);
-
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.POLITE_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.CRAPPIUM_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.ENDERITE_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.AMADEUM_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.COPPER_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.NOPIUM_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.CRASHIUM_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.SMITE_HOE, 0);
-		ModRecipeHelper.addOreDict("toolHoe", ModItems.DIAMOND_HOE, 0);
 	}
 }
