@@ -9,9 +9,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.tab.ModCreativeTabBase;
+import net.thep2wking.oedldoedlcore.util.ModLogInUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.badores.init.ModBlocks;
@@ -76,5 +79,13 @@ public class BadOres {
     @Mod.EventHandler
     public void loadComplete(FMLLoadCompleteEvent event) {
         ModLogger.loadCompleteLogger(MODID, VERSION);
+    }
+
+    @Mod.EventBusSubscriber
+    public static class ModJoinMessage {
+        @SubscribeEvent
+        public static void addJoinMessage(PlayerLoggedInEvent event) {
+            ModLogInUtil.addJoinMessage(event, NAME, "bad-ores-reloaded", VERSION);
+        }
     }
 }
