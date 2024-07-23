@@ -51,6 +51,6 @@ public class BlockTauntum extends ModBlockOreBase {
 	public void playRandomSound(World world, double x, double y, double z, Random random) {
 		int id = random.nextInt(8);
 		SoundEvent sound = SOUND_EVENTS[id];
-		world.playSound(null, x, y, z, sound, SoundCategory.BLOCKS, 3.0f, 1.0f);
+		world.playSound(null, x, y, z, sound, SoundCategory.BLOCKS, 1.5f, 1.0f);
 	}
 }

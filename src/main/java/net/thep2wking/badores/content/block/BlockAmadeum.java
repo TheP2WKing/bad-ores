@@ -50,6 +50,6 @@ public class BlockAmadeum extends ModBlockOreBase {
 		int note = random.nextInt(25);
 		float f = (float) Math.pow(2.0D, (note - 12) / 12.0D);
 		SoundEvent sound = SOUND_EVENTS[id];
-		world.playSound(null, x + 0.5D, y + 0.5D, z + 0.5D, sound, SoundCategory.BLOCKS, 3.0f, f);
+		world.playSound(null, x + 0.5D, y + 0.5D, z + 0.5D, sound, SoundCategory.BLOCKS, 1.5f, f);
 	}
 }
