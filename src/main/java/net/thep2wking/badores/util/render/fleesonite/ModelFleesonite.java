@@ -1,4 +1,4 @@
-package net.thep2wking.badores.util.render;
+package net.thep2wking.badores.util.render.fleesonite;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
@@ -77,7 +77,6 @@ public class ModelFleesonite extends ModelBase {
 	}
 
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		super.render(entity, f, f1, f2, f3, f4, f5);
 		setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 		block.render(f5);
 		footright.render(f5);

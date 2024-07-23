@@ -1,4 +1,4 @@
-package net.thep2wking.badores.util.render;
+package net.thep2wking.badores.util.render.nosleeptonite;
 
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -12,15 +12,16 @@ import net.thep2wking.badores.content.entities.EntityNosleeptonite;
 
 @SideOnly(Side.CLIENT)
 public class RenderNosleeptonite extends RenderLiving<EntityNosleeptonite> {
-	private ResourceLocation mobTexture = new ResourceLocation(BadOres.MODID, "textures/entity/nosleeptonite.png");
+	public static final ResourceLocation TEXTURE = new ResourceLocation(BadOres.MODID,
+			"textures/entity/nosleeptonite.png");
 
 	public RenderNosleeptonite(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelNosleeptonite(), 0.75f);
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityNosleeptonite entity) {
-		return mobTexture;
+	public ResourceLocation getEntityTexture(EntityNosleeptonite entity) {
+		return TEXTURE;
 	}
 
 	public static final RenderNosleeptonite.Factory FACTORY = new RenderNosleeptonite.Factory();

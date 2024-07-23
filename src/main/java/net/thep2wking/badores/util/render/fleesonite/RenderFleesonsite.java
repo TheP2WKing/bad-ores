@@ -1,4 +1,4 @@
-package net.thep2wking.badores.util.render;
+package net.thep2wking.badores.util.render.fleesonite;
 
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -12,15 +12,16 @@ import net.thep2wking.badores.content.entities.EntityFleesonsite;
 
 @SideOnly(Side.CLIENT)
 public class RenderFleesonsite extends RenderLiving<EntityFleesonsite> {
-	private ResourceLocation mobTexture = new ResourceLocation(BadOres.MODID, "textures/entity/fleesonsite.png");
+	public static final ResourceLocation TEXTURE = new ResourceLocation(BadOres.MODID,
+			"textures/entity/fleesonsite.png");
 
 	public RenderFleesonsite(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelFleesonite(), 0.75f);
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityFleesonsite entity) {
-		return mobTexture;
+	public ResourceLocation getEntityTexture(EntityFleesonsite entity) {
+		return TEXTURE;
 	}
 
 	public static final RenderFleesonsite.Factory FACTORY = new RenderFleesonsite.Factory();
