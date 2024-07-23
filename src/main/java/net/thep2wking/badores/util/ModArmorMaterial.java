@@ -4,7 +4,7 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.thep2wking.badores.BadOres;
 import net.thep2wking.badores.init.ModItems;
-import net.thep2wking.reloadedlib.api.armor.ModArmorMaterialBase;
+import net.thep2wking.oedldoedlcore.api.armor.ModArmorMaterialBase;
 
 public class ModArmorMaterial {
 	public static final ArmorMaterial POLITE = ModArmorMaterialBase.addArmorMaterial(BadOres.MODID, "polite", 8,

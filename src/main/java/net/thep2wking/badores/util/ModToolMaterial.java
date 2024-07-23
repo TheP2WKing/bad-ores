@@ -3,7 +3,7 @@ package net.thep2wking.badores.util;
 import net.minecraft.item.Item.ToolMaterial;
 import net.thep2wking.badores.BadOres;
 import net.thep2wking.badores.init.ModItems;
-import net.thep2wking.reloadedlib.api.tool.ModToolMaterialBase;
+import net.thep2wking.oedldoedlcore.api.tool.ModToolMaterialBase;
 
 public class ModToolMaterial {
 	public static final ToolMaterial POLITE = ModToolMaterialBase.addToolMaterial(BadOres.MODID, "polite", 200, 1, 5f,
