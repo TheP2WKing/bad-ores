@@ -29,7 +29,7 @@ import net.thep2wking.oedldoedlcore.util.ModRandomUtil;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 public class BlockPandaemonium extends ModBlockOreBase {
-	public final List<Item> ITEMS = Arrays.asList(Item.getItemFromBlock(Blocks.NETHERRACK),
+	public final List<Item> DROPS = Arrays.asList(Item.getItemFromBlock(Blocks.NETHERRACK),
 			Item.getItemFromBlock(Blocks.SOUL_SAND), Item.getItemFromBlock(Blocks.OBSIDIAN), Items.FIRE_CHARGE,
 			Items.BLAZE_ROD, Items.MAGMA_CREAM, Items.NETHER_WART);
 
@@ -42,8 +42,9 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	}
 
 	@Override
-	public int tickRate(World worldIn) {
-		return 1000;
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		super.onBlockAdded(worldIn, pos, state);
+		worldIn.scheduleUpdate(pos, this, 1000);
 	}
 
 	@Override
@@ -108,12 +109,12 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	@Override
 	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state,
 			int fortune) {
+		Random random = new Random();
+		int num = random.nextInt(3) + 1;
 		if (BadOresConfig.EVENTS.PANDAEMONIUM_DROPS_RESOURCES) {
-			Random random = new Random();
-			int num = random.nextInt(3);
 			for (int i = 0; i < num; i++) {
-				Item item = ModRandomUtil.selectRandom(random, ITEMS);
-				drops.add(new ItemStack(item, random.nextInt(5)));
+				Item item = ModRandomUtil.selectRandom(random, DROPS);
+				drops.add(new ItemStack(item, random.nextInt(4) + 1));
 			}
 		}
 	}
