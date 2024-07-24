@@ -23,19 +23,21 @@ public class BlockFleesonsite extends ModBlockOreBase {
 			float resistance, int lightLevel) {
 		super(modid, name, tab, minXp, maxXp, material, sound, mapColor, harvestLevel, toolType, hardness, resistance,
 				lightLevel);
-		setTickRandomly(true);
 	}
 
 	@Override
-	public int tickRate(World worldIn) {
-		return 40;
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		super.onBlockAdded(worldIn, pos, state);
+		worldIn.scheduleUpdate(pos, this, 40);
 	}
 
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		super.updateTick(worldIn, pos, state, rand);
+		worldIn.scheduleUpdate(pos, this, 40);
 		EntityPlayer player = worldIn.getClosestPlayer(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 6.0,
 				false);
-		if (player != null && BadOresConfig.EVENTS.FLEESONSITE_SPAWNS_ITSELF) {
+		if (player != null && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.FLEESONSITE_SPAWNS_ITSELF) {
 			flee(worldIn, pos.getX(), pos.getY(), pos.getZ(), player);
 		}
 	}
@@ -57,7 +59,7 @@ public class BlockFleesonsite extends ModBlockOreBase {
 				&& BadOresConfig.EVENTS.FLEESONSITE_SPAWNS_ITSELF) {
 			flee(worldIn, pos.getX(), pos.getY(), pos.getZ(), player);
 		}
-		return true;
+		return !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.FLEESONSITE_SPAWNS_ITSELF;
 	}
 
 	@Override

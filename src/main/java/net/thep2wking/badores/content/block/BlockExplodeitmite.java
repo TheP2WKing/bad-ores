@@ -20,12 +20,25 @@ public class BlockExplodeitmite extends ModBlockOreBase {
 			float resistance, int lightLevel) {
 		super(modid, name, tab, minXp, maxXp, material, sound, mapColor, harvestLevel, toolType, hardness, resistance,
 				lightLevel);
-		setTickRandomly(true);
 	}
 
 	@Override
-	public int tickRate(World worldIn) {
-		return 15000;
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		super.onBlockAdded(worldIn, pos, state);
+		worldIn.scheduleUpdate(pos, this, 10000);
+	}
+
+	@Override
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		super.updateTick(worldIn, pos, state, rand);
+		worldIn.scheduleUpdate(pos, this, 10000);
+		if (!worldIn.isRemote && BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSIONS) {
+			if (rand.nextInt(5) == 0) {
+				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
+						2.0f + rand.nextFloat() * 2.0f, false, BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSION_DAMAGE);
+				worldIn.setBlockToAir(new BlockPos(pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ()));
+			}
+		}
 	}
 
 	@Override
@@ -35,17 +48,6 @@ public class BlockExplodeitmite extends ModBlockOreBase {
 			if (random.nextInt(5) == 0) {
 				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
 						2.0f + random.nextFloat() * 2.0f, false, BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSION_DAMAGE);
-			}
-		}
-	}
-
-	@Override
-	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
-		if (!worldIn.isRemote && BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSIONS) {
-			if (random.nextInt(5) == 0) {
-				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
-						2.0f + random.nextFloat() * 2.0f, false, BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSION_DAMAGE);
-				worldIn.setBlockToAir(new BlockPos(pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ()));
 			}
 		}
 	}

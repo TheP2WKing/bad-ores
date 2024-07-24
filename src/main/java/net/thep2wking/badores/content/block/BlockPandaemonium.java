@@ -42,9 +42,8 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	}
 
 	@Override
-	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
-		super.onBlockAdded(worldIn, pos, state);
-		worldIn.scheduleUpdate(pos, this, 1000);
+	public int tickRate(World worldIn) {
+		return 1000;
 	}
 
 	@Override
