@@ -50,7 +50,7 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
 		if (!worldIn.isRemote && random.nextInt(10) == 0 && BadOresConfig.EVENTS.PANDAEMONIUM_SOUNDS) {
 			worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), ModSounds.PANDAEMONIUM_MINE,
-					SoundCategory.BLOCKS, 1.0F, 1.0f);
+					SoundCategory.BLOCKS, 1.5F, 1.0f);
 		}
 	}
 
@@ -68,7 +68,7 @@ public class BlockPandaemonium extends ModBlockOreBase {
 			Random random = new Random();
 			worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(),
 					ModSounds.PANDAEMONIUM_MINE,
-					SoundCategory.BLOCKS, 1.0F, 1.0f);
+					SoundCategory.BLOCKS, 1.5F, 1.0f);
 			int pigmen = random.nextInt(4);
 			for (int i = 0; i < pigmen; i++) {
 				EntityPigZombie entityPigZombie = new EntityPigZombie(worldIn);

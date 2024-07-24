@@ -58,7 +58,7 @@ public class BlockNosleeptonite extends ModBlockOreBase {
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random) {
 		if (!worldIn.isRemote && random.nextInt(10) == 0 && BadOresConfig.EVENTS.NOSLEEPTONITE_SOUNDS) {
 			worldIn.playSound(null, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D,
-					ModSounds.NOSLEEPTONITE_BLOCK, SoundCategory.BLOCKS, 0.75f, 1.0f);
+					ModSounds.NOSLEEPTONITE_BLOCK, SoundCategory.BLOCKS, 1.0f, 1.0f);
 		}
 	}
 }
