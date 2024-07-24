@@ -64,7 +64,7 @@ public class BadOresJERPlugin {
 					new LootDrop(new ItemStack(Items.QUARTZ, 5, 0)),
 					new LootDrop(new ItemStack(Items.GOLDEN_APPLE, 5, 0)) });
 			addOreGen(ModBlocks.EXPLODEITMITE_ORE, 2, 3, 1, 48);
-			addSpikeOreGen(ModBlocks.MARMITE_ORE, 60, 20, 0.0001f);
+			addSpikeOreGen(ModBlocks.MARMITE_ORE, 55, 20, 0.0001f);
 			addOreGen(ModBlocks.SHIFTIUM_ORE, 6, 6, 1, 64);
 			addOreGen(ModBlocks.WANTARITE_ORE, 5, 5, 16, 64);
 			addSpikeOreGen(ModBlocks.IDLIKEABITE_ORE, 65, 15, 0.0003f);
@@ -87,7 +87,7 @@ public class BadOresJERPlugin {
 							new LootDrop(new ItemStack(Items.MAGMA_CREAM, 2, 0)),
 							new LootDrop(new ItemStack(Items.NETHER_WART, 2, 0)) });
 			addOreGen(ModBlocks.NOSLEEPTONITE_ORE, 2, 3, 1, 40);
-			addSpikeOreGen(ModBlocks.APPETITE_ORE, 60, 20, 0.0002f);
+			addSpikeOreGen(ModBlocks.APPETITE_ORE, 55, 20, 0.0002f);
 			addOreGen(ModBlocks.CRASHIUM_ORE, 6, 5, 1, 64);
 			addOreGen(ModBlocks.SMITE_ORE, 6, 6, 1, 64);
 			addOreGen(ModBlocks.DIAMOND_ORE, 6, 6, 16, 64,
