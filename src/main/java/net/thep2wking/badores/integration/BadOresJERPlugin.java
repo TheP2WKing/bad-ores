@@ -50,7 +50,7 @@ public class BadOresJERPlugin {
 					new LootDrop[] { new LootDrop(new ItemStack(Items.GLOWSTONE_DUST, 1, 0)) });
 			addOreGen(ModBlocks.MISLEADIUM_ORE, 6, 6, 1, 64);
 			addOreGen(ModBlocks.GHOSTIUM_ORE, 6, 6, 1, 64);
-			addOreGen(ModBlocks.AMADEUM_ORE, 5, 6, 3, 64);
+			addOreGen(ModBlocks.AMADEUM_ORE, 5, 6, 4, 64);
 			addOreGen(ModBlocks.BARELYGENERITE_ORE, 1, 3, 1, 64);
 			addOreGen(ModBlocks.UNOBTAINIUM_ORE, 6, 5, 1, 64);
 			addOreGen(ModBlocks.COPPER_ORE, 10, 12, 20, 100);
@@ -70,7 +70,7 @@ public class BadOresJERPlugin {
 			addSpikeOreGen(ModBlocks.IDLIKEABITE_ORE, 65, 15, 0.0003f);
 			addOreGen(ModBlocks.METEORITE_ORE, 8, 8, 80, 220);
 			addOreGen(ModBlocks.STREETSCUM_ORE, 5, 6, 1, 48);
-			addOreGen(ModBlocks.FLEESONSITE_ORE, 5, 6, 1, 64);
+			addOreGen(ModBlocks.FLEESONSITE_ORE, 5, 5, 1, 64);
 			addOreGen(ModBlocks.NOPIUM_ORE, 6, 6, 1, 64);
 			addOreGen(ModBlocks.ZOMBIEUNITE_ORE, 4, 6, 1, 64,
 					new LootDrop[] { new LootDrop(new ItemStack(Items.SKULL, 1, 2)) });
@@ -90,7 +90,7 @@ public class BadOresJERPlugin {
 			addSpikeOreGen(ModBlocks.APPETITE_ORE, 55, 20, 0.0002f);
 			addOreGen(ModBlocks.CRASHIUM_ORE, 6, 5, 1, 64);
 			addOreGen(ModBlocks.SMITE_ORE, 6, 6, 1, 64);
-			addOreGen(ModBlocks.DIAMOND_ORE, 6, 6, 16, 64,
+			addOreGen(ModBlocks.DIAMOND_ORE, 6, 6, 1, 64,
 					new LootDrop[] { new LootDrop(new ItemStack(ModItems.DIAMOND, 1, 0)) });
 			addOreGen(ModBlocks.KAKKARITE_ORE, 6, 5, 1, 64, new LootDrop[] { new LootDrop(
 					new ItemStack(ModItems.KAKKARITE_GEMSTONE, BadOresConfig.EVENTS.KAKKARITE_DROP_COUNT, 0)) });

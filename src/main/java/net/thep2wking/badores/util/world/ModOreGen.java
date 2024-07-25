@@ -28,7 +28,7 @@ public class ModOreGen implements IWorldGenerator {
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.LITE_ORE, 4, random.nextInt(4), 1, 48, BadOresConfig.WORLD.LITE);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.MISLEADIUM_ORE, 6, random.nextInt(6), 1, 64, BadOresConfig.WORLD.MISLEADIUM);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.GHOSTIUM_ORE, 6, random.nextInt(6), 1, 64, BadOresConfig.WORLD.GHOSTIUM);
-			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.AMADEUM_ORE, 5, random.nextInt(3), 1, 64, BadOresConfig.WORLD.AMADEUM);
+			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.AMADEUM_ORE, 5, random.nextInt(4), 1, 64, BadOresConfig.WORLD.AMADEUM);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.BARELYGENERITE_ORE, 3, random.nextInt(2), 1, 64, BadOresConfig.WORLD.BARELYGENERITE);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.UNOBTAINIUM_ORE, 6, random.nextInt(5), 1, 64, BadOresConfig.WORLD.UNOBTAINIUM);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.COPPER_ORE, 10, random.nextInt(12), 20, 100, BadOresConfig.WORLD.COPPER);
@@ -43,7 +43,7 @@ public class ModOreGen implements IWorldGenerator {
 			ModOreGenHelper.addOreGen(world, random, chunkX, chunkZ, ModBlocks.IDLIKEABITE_ORE, 8, random.nextInt(8), Blocks.DIRT, 50, 80, DimensionType.OVERWORLD.getId(), BadOresConfig.WORLD.IDLIKEABITE);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.METEORITE_ORE, 8, random.nextInt(8), 80, 220, BadOresConfig.WORLD.METEORITE);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.STREETSCUM_ORE, 5, random.nextInt(6), 1, 48, BadOresConfig.WORLD.STREETSCUM);
-			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.FLEESONSITE_ORE, 5, random.nextInt(6), 1, 64, BadOresConfig.WORLD.FLEESONSITE);
+			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.FLEESONSITE_ORE, 5, random.nextInt(5), 1, 64, BadOresConfig.WORLD.FLEESONSITE);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.NOPIUM_ORE, 6, random.nextInt(6), 1, 64, BadOresConfig.WORLD.NOPIUM);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.ZOMBIEUNITE_ORE, 4, random.nextInt(6), 1, 64, BadOresConfig.WORLD.ZOMBIEUNITE);
 			ModOreGenHelper.addOreGen(world, random, chunkX, chunkZ, ModBlocks.PAINTITWHITE_ORE,  8, random.nextInt(10), Blocks.GRAVEL, 20, 100, DimensionType.OVERWORLD.getId(), BadOresConfig.WORLD.PAINTITWHITE);
@@ -54,7 +54,7 @@ public class ModOreGen implements IWorldGenerator {
 			ModOreGenHelper.addOreGen(world, random, chunkX, chunkZ, ModBlocks.APPETITE_ORE, 8, random.nextInt(10), Blocks.SAND, 30, 80, DimensionType.OVERWORLD.getId(), BadOresConfig.WORLD.APPETITE);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.CRASHIUM_ORE, 6, random.nextInt(5), 1, 64, BadOresConfig.WORLD.CRASHIUM);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.SMITE_ORE, 6, random.nextInt(6), 1, 64, BadOresConfig.WORLD.SMITE);
-			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.DIAMOND_ORE, 6, random.nextInt(6), 16, 64, BadOresConfig.WORLD.DIAMOND);
+			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.DIAMOND_ORE, 6, random.nextInt(6), 1, 64, BadOresConfig.WORLD.DIAMOND);
 			ModOreGenHelper.addOreGenOverworld(world, random, chunkX, chunkZ, ModBlocks.KAKKARITE_ORE, 6, random.nextInt(5), 1, 64, BadOresConfig.WORLD.KAKKARITE);
 		}
 	}
