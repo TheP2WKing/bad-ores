@@ -1,4 +1,4 @@
-package net.thep2wking.badores.content.entities;
+package net.thep2wking.badores.content.entity;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +26,7 @@ public class EntityNosleeptonite extends EntityMob {
 		super(world);
 		setSize(1.0f, 1.0f);
 		this.experienceValue = EXPERIENCE_VALUE;
+		this.stepHeight = 1.0f;
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

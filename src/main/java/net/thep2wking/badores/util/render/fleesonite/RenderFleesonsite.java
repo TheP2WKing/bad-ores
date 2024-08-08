@@ -8,7 +8,7 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.badores.content.entities.EntityFleesonsite;
+import net.thep2wking.badores.content.entity.EntityFleesonsite;
 
 @SideOnly(Side.CLIENT)
 public class RenderFleesonsite extends RenderLiving<EntityFleesonsite> {

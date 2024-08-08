@@ -1,8 +1,8 @@
 package net.thep2wking.badores.init;
 
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.badores.content.entities.EntityFleesonsite;
-import net.thep2wking.badores.content.entities.EntityNosleeptonite;
+import net.thep2wking.badores.content.entity.EntityFleesonsite;
+import net.thep2wking.badores.content.entity.EntityNosleeptonite;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 

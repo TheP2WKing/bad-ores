@@ -13,7 +13,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.thep2wking.badores.config.BadOresConfig;
-import net.thep2wking.badores.content.entities.EntityFleesonsite;
+import net.thep2wking.badores.content.entity.EntityFleesonsite;
 import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 

@@ -18,7 +18,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.thep2wking.badores.config.BadOresConfig;
-import net.thep2wking.badores.content.entities.EntityNosleeptonite;
+import net.thep2wking.badores.content.entity.EntityNosleeptonite;
 import net.thep2wking.badores.init.ModSounds;
 import net.thep2wking.oedldoedlcore.api.block.ModBlockOreBase;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;

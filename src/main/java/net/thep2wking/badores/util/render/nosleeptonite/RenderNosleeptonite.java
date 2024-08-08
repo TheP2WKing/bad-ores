@@ -8,7 +8,7 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.badores.BadOres;
-import net.thep2wking.badores.content.entities.EntityNosleeptonite;
+import net.thep2wking.badores.content.entity.EntityNosleeptonite;
 
 @SideOnly(Side.CLIENT)
 public class RenderNosleeptonite extends RenderLiving<EntityNosleeptonite> {
