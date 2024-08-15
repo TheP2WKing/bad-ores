@@ -1,41 +1,31 @@
-package net.thep2wking.badores.integration;
+package net.thep2wking.badores.integration.jer;
 
-import jeresources.api.IJERAPI;
 import jeresources.api.conditionals.LightLevel;
-import jeresources.api.distributions.DistributionSquare;
-import jeresources.api.distributions.DistributionTriangular;
 import jeresources.api.drop.LootDrop;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Loader;
 import net.thep2wking.badores.BadOres;
 import net.thep2wking.badores.config.BadOresConfig;
 import net.thep2wking.badores.content.entity.EntityFleesonsite;
 import net.thep2wking.badores.content.entity.EntityNosleeptonite;
 import net.thep2wking.badores.init.ModBlocks;
 import net.thep2wking.badores.init.ModItems;
-import net.thep2wking.oedldoedlcore.util.ModLogger;
+import net.thep2wking.oedldoedlcore.api.integration.ModJERPluginBase;
 
-public class BadOresJERPlugin {
-	@jeresources.api.JERPlugin
-	public static IJERAPI api;
+public class BadOresJERPlugin extends ModJERPluginBase {
+	@Override
+	public String getModId() {
+		return BadOres.MODID;
+	}
 
-	public static void register() {
-		if (api == null) {
-			return;
-		}
-
-		if (Loader.isModLoaded("jeresources")) {
-			ModLogger.registeredIntegration("JER", BadOres.MODID);
-		}
-
+	@Override
+	public void register() {
 		if (BadOresConfig.INTEGRATION.JER_INTEGRATION) {
-			api.getMobRegistry().register(new EntityFleesonsite(api.getWorld()), LightLevel.any,
-					EntityFleesonsite.EXPERIENCE_VALUE, EntityFleesonsite.LOOT_TABLE);
-			api.getMobRegistry().register(new EntityNosleeptonite(api.getWorld()), LightLevel.any,
-					EntityNosleeptonite.EXPERIENCE_VALUE, EntityNosleeptonite.LOOT_TABLE);
+			addMob(new EntityFleesonsite(getWorld()), LightLevel.any, EntityFleesonsite.EXPERIENCE_VALUE,
+					EntityFleesonsite.LOOT_TABLE);
+			addMob(new EntityNosleeptonite(getWorld()), LightLevel.any, EntityNosleeptonite.EXPERIENCE_VALUE,
+					EntityNosleeptonite.LOOT_TABLE);
 
 			addOreGen(ModBlocks.POLITE_ORE, 6, 6, 1, 64);
 			addOreGen(ModBlocks.WANNAFITE_ORE, 6, 6, 1, 64,
@@ -94,32 +84,6 @@ public class BadOresJERPlugin {
 					new LootDrop[] { new LootDrop(new ItemStack(ModItems.DIAMOND, 1, 0)) });
 			addOreGen(ModBlocks.KAKKARITE_ORE, 6, 5, 1, 64, new LootDrop[] { new LootDrop(
 					new ItemStack(ModItems.KAKKARITE_GEMSTONE, BadOresConfig.EVENTS.KAKKARITE_DROP_COUNT, 0)) });
-		}
-	}
-
-	public static void addOreGen(Block block, int veinSize, int chance, int minY, int maxY) {
-		api.getWorldGenRegistry().register(new ItemStack(block),
-				new DistributionSquare((int) ((chance - 1) / 2), veinSize, minY, maxY), new LootDrop[0]);
-	}
-
-	public static void addOreGen(Block block, int veinSize, int chance, int minY, int maxY, LootDrop[] drops) {
-		api.getWorldGenRegistry().register(new ItemStack(block),
-				new DistributionSquare((int) ((chance - 1) / 2), veinSize, minY, maxY), true, drops);
-	}
-
-	public static void addSpikeOreGen(Block block, int midY, int range, float maxChance) {
-		api.getWorldGenRegistry().register(new ItemStack(block), new DistributionTriangular(midY, range, maxChance),
-				new LootDrop[0]);
-	}
-
-	public static void addSpikeOreGen(Block block, int midY, int range, float maxChance, LootDrop[] drops) {
-		api.getWorldGenRegistry().register(new ItemStack(block), new DistributionTriangular(midY, range, maxChance),
-				true, drops);
-	}
-
-	public static void registerJERPlugin() {
-		if (Loader.isModLoaded("jeresources")) {
-			BadOresJERPlugin.register();
 		}
 	}
 }

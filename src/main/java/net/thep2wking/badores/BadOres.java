@@ -13,13 +13,14 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.thep2wking.oedldoedlcore.api.integration.ModJERPluginBase;
 import net.thep2wking.oedldoedlcore.api.tab.ModCreativeTabBase;
 import net.thep2wking.oedldoedlcore.util.ModLogInUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.badores.init.ModBlocks;
 import net.thep2wking.badores.init.ModEntities;
-import net.thep2wking.badores.integration.BadOresJERPlugin;
+import net.thep2wking.badores.integration.jer.BadOresJERPlugin;
 import net.thep2wking.badores.registry.ModOreDict;
 import net.thep2wking.badores.registry.ModRecipes;
 import net.thep2wking.badores.util.events.ModEventHandler;
@@ -65,8 +66,8 @@ public class BadOres {
         ModOreDict.registerOreDict();
         ModRecipes.registerRecipes();
         ModOreGen.registerModOredGen();
-        BadOresJERPlugin.registerJERPlugin();
         MinecraftForge.EVENT_BUS.register(ModEventHandler.INSTANCE);
+        ModJERPluginBase.registerPlugin(new BadOresJERPlugin());
         PROXY.init(event);
     }
 
@@ -85,7 +86,7 @@ public class BadOres {
     public static class ModJoinMessage {
         @SubscribeEvent
         public static void addJoinMessage(PlayerLoggedInEvent event) {
-            ModLogInUtil.addJoinMessage(event, NAME, "bad-ores-reloaded", VERSION);
+            ModLogInUtil.addJoinMessage(event, NAME, "bad-ores-reloaded", VERSION, true);
         }
     }
 }

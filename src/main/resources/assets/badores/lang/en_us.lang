@@ -1,10 +1,12 @@
 # creative tabs
 itemGroup.badores.name=Bad Ores Reloaded
 
-# blocks
+# join message
+join.badoresreloaded.message=If ores could not get any worse!
 
+# ores
 tile.badores.polite.name=Polite
-tile.badores.polite.jei=First discovered in the west pole, this ore was labeled 'Polite'. It seems to live a blithesome life underground, often found huddled together in groups. Still, it seems to enjoy being brought into new forms, and has no problem being worked into armor or tools.
+tile.badores.polite.jei1=First discovered in the west pole, this ore was labeled 'Polite'. It seems to live a blithesome life underground, often found huddled together in groups. Still, it seems to enjoy being brought into new forms, and has no problem being worked into armor or tools.
 tile.badores.polite_block.name=Block of Polite
 tile.badores.polite.mined.0=Thanks for mining me!
 tile.badores.polite.mined.1=That was very kind of you.
@@ -55,7 +57,7 @@ tile.badores.polite.tool.7=Thanks for letting me mine this block!
 tile.badores.polite.tool.8=Thank you for your continued use!
 
 tile.badores.crashium.name=Crashium
-tile.badores.crashium.jei=This ore has ascended to a higher form of existence. Our trivial matters concern it not, and it has dedicated itself to solving the problems of anti-determinism in the abstract varidimensional multiverse. Good luck simulating that in Minecraft.
+tile.badores.crashium.jei1=This ore has ascended to a higher form of existence. Our trivial matters concern it not, and it has dedicated itself to solving the problems of anti-determinism in the abstract varidimensional multiverse. Good luck simulating that in Minecraft.
 tile.badores.crashium_block.name=Block of Crashium
 tile.badores.crashium.nocrash.0=Poof!
 tile.badores.crashium.nocrash.1=Brzzz...
@@ -84,7 +86,7 @@ tile.badores.crashium.crash.10=Swapping out Flux Capacitor...
 tile.badores.crashium.runtime_exception=Crashium! (Intentional crash, do not report!)
 
 tile.badores.misleadium.name=Misleadium
-tile.badores.misleadium.jei=This mineral has widely been reported to give false information to the miner to get spared from harm. The name is misleading, though. While you think the information to be wrong, the item does exist - until you look.
+tile.badores.misleadium.jei1=This mineral has widely been reported to give false information to the miner to get spared from harm. The name is misleading, though. While you think the information to be wrong, the item does exist - until you look.
 tile.badores.misleadium.baseMessage.0=There is some %s at %sx, %sy, %sz!
 tile.badores.misleadium.baseMessage.1=Go to %2$sx, %3$sy, %4$sz and you will find %1$s!
 tile.badores.misleadium.baseMessage.2=I heard there's %s at %sx, %sy, %sz!
@@ -94,124 +96,124 @@ tile.badores.misleadium.baseMessage.5=Please don't smelt me! Get the %s at %sx, 
 tile.badores.misleadium.baseMessage.6=How about you go to %2$sx, %3$sy, %4$sz? There is %1$s there!!
 
 tile.badores.wannafite.name=Wannafite
-tile.badores.wannafite.jei=This ore seems to be reluctant to be hit in the head with a pickaxe, thrown into the hot fires of a furnace, and then repeatedly being hammered down into the shape of a tool. It has learned to fight back.
+tile.badores.wannafite.jei1=This ore seems to be reluctant to be hit in the head with a pickaxe, thrown into the hot fires of a furnace, and then repeatedly being hammered down into the shape of a tool. It has learned to fight back.
 
 tile.badores.breakium.name=Breakium
-tile.badores.breakium.jei=Theoretically, Breakium is just a normal ore that is found below the surface. However, past mining experiments have revealed it to be cursed - All pickaxes get a broken shaft, a crack in the metal, or just straight-up disappear when mining. Handle with care.
+tile.badores.breakium.jei1=Theoretically, Breakium is just a normal ore that is found below the surface. However, past mining experiments have revealed it to be cursed - All pickaxes get a broken shaft, a crack in the metal, or just straight-up disappear when mining. Handle with care.
 
 tile.badores.stonium.name=Stonium
-tile.badores.stonium.jei=What are you looking this up for. It's just stone. What, are you expecting every rock to look exactly the same?
+tile.badores.stonium.jei1=What are you looking this up for. It's just stone. What, are you expecting every rock to look exactly the same?
 
 tile.badores.crappium.name=Crappium
-tile.badores.crappium.jei=Nobody has ever found a good use for this ore. It's too common to be a commodity, too fragile to make for tools or armor, and just too damn ugly to be purely decorational. You'll be lucky if you don't have to pay to get rid of it.
+tile.badores.crappium.jei1=Nobody has ever found a good use for this ore. It's too common to be a commodity, too fragile to make for tools or armor, and just too damn ugly to be purely decorational. You'll be lucky if you don't have to pay to get rid of it.
 tile.badores.crappium_block.name=Block of Crappium
 
 tile.badores.enderite.name=Enderite
-tile.badores.enderite.jei=Over the years, some of the Endermen's activity has started to take its tolls over some iron ores, corrupting them with space anormalities. If you suddenly find yourself looking at a giant surface rapidly gaining speed towards your face, they are why.
+tile.badores.enderite.jei1=Over the years, some of the Endermen's activity has started to take its tolls over some iron ores, corrupting them with space anormalities. If you suddenly find yourself looking at a giant surface rapidly gaining speed towards your face, they are why.
 tile.badores.enderite_block.name=Block of Enderite
 
 tile.badores.lite.name=Lite
-tile.badores.lite.jei=Ohhh, pretty shiny light! Critics say the glow is caused by violent radiation, but seriously, you can't even see that stuff. Jackpot, free light source!
+tile.badores.lite.jei1=Ohhh, pretty shiny light! Critics say the glow is caused by violent radiation, but seriously, you can't even see that stuff. Jackpot, free light source!
 
 tile.badores.amadeum.name=Amadeum
-tile.badores.amadeum.jei=With plate tectonics come interesting side effects, sometimes. This almost crystal-like mineral strangely interacts with... Oh wait, you don't actually care about the mechanics, do you? ... This ore makes funny sounds, and can be worked into decent armor and tools.
+tile.badores.amadeum.jei1=With plate tectonics come interesting side effects, sometimes. This almost crystal-like mineral strangely interacts with... Oh wait, you don't actually care about the mechanics, do you? ... This ore makes funny sounds, and can be worked into decent armor and tools.
 tile.badores.amadeum_block.name=Block of Amadeum
 
 tile.badores.barelygenerite.name=Barelygenerite
-tile.badores.barelygenerite.jei=Is this a real ore? Or is it just phantastic? Whatever the case, it was only found once before, and is so exceedingly rare that you will probably never be able to make use of it. If you do, please tell us about its properties so we can expand this book!
+tile.badores.barelygenerite.jei1=Is this a real ore? Or is it just phantastic? Whatever the case, it was only found once before, and is so exceedingly rare that you will probably never be able to make use of it. If you do, please tell us about its properties so we can expand this book!
 tile.badores.barelygenerite_block.name=Block of Barelygenerite
 
 tile.badores.unobtainium.name=Unobtainium
-tile.badores.unobtainium.jei=No methods applied to obtain this ore ever worked. Thus, not much is known - but it would make for a goddamn amazing armor, if finally acquired!
+tile.badores.unobtainium.jei1=No methods applied to obtain this ore ever worked. Thus, not much is known - but it would make for a goddamn amazing armor, if finally acquired!
 
 tile.badores.copper_ore.name=Copper Ore
-tile.badores.copper_ore.jei=Copper is often used in electronics and is otherwise just a generally useful metal. What do you mean, you already have ten other types of copper generating? This one is clearly better. Just remember that.
+tile.badores.copper_ore.jei1=Copper is often used in electronics and is otherwise just a generally useful metal. What do you mean, you already have ten other types of copper generating? This one is clearly better. Just remember that.
 tile.badores.copper_block.name=Block of Copper
 
 tile.badores.ghostium.name=Ghostium
-tile.badores.ghostium.jei=You can see it, but you can't grab it. Thus, it was labeled 'ghostium' for obvious reasons - along with similar things like the 'ghostrays' from our sun, or the 'blue-ghost-stuff' that you drink all day.
+tile.badores.ghostium.jei1=You can see it, but you can't grab it. Thus, it was labeled 'ghostium' for obvious reasons - along with similar things like the 'ghostrays' from our sun, or the 'blue-ghost-stuff' that you drink all day.
 
 tile.badores.killium.name=Killium
-tile.badores.killium.jei=Mining this ore is so amazing, you can guarantee a heart attack afterwards. Just try it yourself - I assure you you will never do anything as great afterwards!
+tile.badores.killium.jei1=Mining this ore is so amazing, you can guarantee a heart attack afterwards. Just try it yourself - I assure you you will never do anything as great afterwards!
 
 tile.badores.uselessium.name=Uselessium
-tile.badores.uselessium.jei=Believe it or not, but this ore is even more useless than crappium. It literally does nothing. Maybe it will go away if you concentrate on ignoring it long enough.
+tile.badores.uselessium.jei1=Believe it or not, but this ore is even more useless than crappium. It literally does nothing. Maybe it will go away if you concentrate on ignoring it long enough.
 
 tile.badores.balancium.name=Balancium
-tile.badores.balancium.jei=To make up for long days spent mining 10000 stones, this balances out your stress and frustration. It contains many shinies. What more do you need to know?
+tile.badores.balancium.jei1=To make up for long days spent mining 10000 stones, this balances out your stress and frustration. It contains many shinies. What more do you need to know?
 
 tile.badores.explodeitmite.name=Explodeitmite
-tile.badores.explodeitmite.jei=Main food source of creepers, this ore contains more explosive power than the famed nuclear weapons. Why does it not obliterate everything, you ask? Well, before the main explosive peak is reached, the material is turned to ashes by its own explosion. Science.
+tile.badores.explodeitmite.jei1=Main food source of creepers, this ore contains more explosive power than the famed nuclear weapons. Why does it not obliterate everything, you ask? Well, before the main explosive peak is reached, the material is turned to ashes by its own explosion. Science.
 
 tile.badores.movium.name=Movium
-tile.badores.movium.jei=You can never quite mine it... Just when you are about done, it just appears to have moved. Maybe you have just mined the wrong spot?
+tile.badores.movium.jei1=You can never quite mine it... Just when you are about done, it just appears to have moved. Maybe you have just mined the wrong spot?
 
 tile.badores.marmite.name=Marmite
-tile.badores.marmite.jei=All-time favourite bread spread. Contrary to popular belief, it's not organic matter, but actually mined from stone. Try smelting it into its workable form, and enjoy tasty goodness!
+tile.badores.marmite.jei1=All-time favourite bread spread. Contrary to popular belief, it's not organic matter, but actually mined from stone. Try smelting it into its workable form, and enjoy tasty goodness!
 tile.badores.marmite_block.name=Block of Marmite
 
 tile.badores.shiftium.name=Shiftium
-tile.badores.shiftium.jei=Everything passes just right through it. You can't even remove it from its containing stone, much less use it. The only effective way of mining it is with pure energy - explosions!
+tile.badores.shiftium.jei1=Everything passes just right through it. You can't even remove it from its containing stone, much less use it. The only effective way of mining it is with pure energy - explosions!
 
 tile.badores.smite.name=Smite
-tile.badores.smite.jei=Smite is said to be Thor's favourite ore. It makes for absolutely awful armor, but maybe you can make some good tools out of it.
+tile.badores.smite.jei1=Smite is said to be Thor's favourite ore. It makes for absolutely awful armor, but maybe you can make some good tools out of it.
 tile.badores.smite_block.name=Block of Smite
 
 tile.badores.wantarite.name=Wantarite
-tile.badores.wantarite.jei=Somehow contains a pig. Don't ask me how, I'm just making these stories up. This is honestly asking too much of me.
+tile.badores.wantarite.jei1=Somehow contains a pig. Don't ask me how, I'm just making these stories up. This is honestly asking too much of me.
 
 tile.badores.meteorite.name=Meteorite
-tile.badores.meteorite.jei=Mining this ore somehow attracts cosmic forces, and makes it rain stone or netherrack. As long as you mine it underground, you should be fine, but remember to warn others above when you do mine it!
+tile.badores.meteorite.jei1=Mining this ore somehow attracts cosmic forces, and makes it rain stone or netherrack. As long as you mine it underground, you should be fine, but remember to warn others above when you do mine it!
 
 tile.badores.streetscum.name=Streetscum
-tile.badores.streetscum.jei=Excellent pickpocket, especially considering it shouldn't even be able to move. Try to keep your distance from it.
+tile.badores.streetscum.jei1=Excellent pickpocket, especially considering it shouldn't even be able to move. Try to keep your distance from it.
 
 tile.badores.fleesonsite.name=Fleesonsite
-tile.badores.fleesonsite.jei=This ore literally gets up and runs from you when it senses you nearby, crashing head-first into walls, jumping into lava, or running in circles. Consider your own sanity before slaughtering these cute buggers.
+tile.badores.fleesonsite.jei1=This ore literally gets up and runs from you when it senses you nearby, crashing head-first into walls, jumping into lava, or running in circles. Consider your own sanity before slaughtering these cute buggers.
 tile.badores.fleesonsite_block.name=Block of Fleesonsite
 
 tile.badores.nopium.name=Nopium
-tile.badores.nopium.jei=Seems to just slip out of your hands, or even your pockets, all the time. Once, a man dedicated his whole life to making himself its master, and crafted a whole armor from them. The result: The armor would somehow just fall off. Maybe you should take this lesson and mine more worthwhile ores.
+tile.badores.nopium.jei1=Seems to just slip out of your hands, or even your pockets, all the time. Once, a man dedicated his whole life to making himself its master, and crafted a whole armor from them. The result: The armor would somehow just fall off. Maybe you should take this lesson and mine more worthwhile ores.
 tile.badores.nopium_block.name=Block of Nopium
 
 tile.badores.idlikeabite.name=Idlikeabite
-tile.badores.idlikeabite.jei=Mining this ore is so extremely tedious that you tire from the work and afterwards wonder where the nearest delicious chicken leg was again.
+tile.badores.idlikeabite.jei1=Mining this ore is so extremely tedious that you tire from the work and afterwards wonder where the nearest delicious chicken leg was again.
 
 tile.badores.zombieunite.name=Zombieunite
-tile.badores.zombieunite.jei=This ore somehow seems to sense the amount of zombies, and becomes less hard to mine with a higher amount. It is therefore not easy to obtain. Protip: Open public facebook event 'Zombie party - everyone invited!'
+tile.badores.zombieunite.jei1=This ore somehow seems to sense the amount of zombies, and becomes less hard to mine with a higher amount. It is therefore not easy to obtain. Protip: Open public facebook event 'Zombie party - everyone invited!'
 
 tile.badores.paintitwhite.name=Paintitwhite
-tile.badores.paintitwhite.jei=In all actuality, this 'ore' is really just a skeleton ground into little bits by time and tectonics. Maybe it could be used for coloring textiles, or as a fertilizer for your orchis garden.
+tile.badores.paintitwhite.jei1=In all actuality, this 'ore' is really just a skeleton ground into little bits by time and tectonics. Maybe it could be used for coloring textiles, or as a fertilizer for your orchis garden.
 
 tile.badores.iwontfite.name=Iwontfite
-tile.badores.iwontfite.jei=Just carrying this ore makes your limbs all wobbly, and your muscles seem to lose all strength. This, dear Steve, is the incredible power of pacifists.
+tile.badores.iwontfite.jei1=Just carrying this ore makes your limbs all wobbly, and your muscles seem to lose all strength. This, dear Steve, is the incredible power of pacifists.
 
 tile.badores.diamond_ore.name=Diamond Ore
-tile.badores.diamond_ore.jei=For whatever reason, there are diamond-impostors around in the ground, too, probably to get the respect of other ores. Many a miner have found themselves at home, holding up their prize from a long day of work, to discover it was actually just Lookslikediamondium.
+tile.badores.diamond_ore.jei1=For whatever reason, there are diamond-impostors around in the ground, too, probably to get the respect of other ores. Many a miner have found themselves at home, holding up their prize from a long day of work, to discover it was actually just Lookslikediamondium.
 tile.badores.diamond_block.name=Block of Diamond
 
 tile.badores.tauntum.name=Tauntum
-tile.badores.tauntum.jei=Some of the noises this mineral makes sound freakishly similar to animals or monsters. Maybe you should mine it just to get rid of distractions.
+tile.badores.tauntum.jei1=Some of the noises this mineral makes sound freakishly similar to animals or monsters. Maybe you should mine it just to get rid of distractions.
 
 tile.badores.kakkarite.name=Kakkarite
-tile.badores.kakkarite.jei=This ore is so incredibly powerfully compressed, you have no idea. Like, wow. Mine it, and you will be showered with kakkarite ingots, maybe about 9000 of them.
+tile.badores.kakkarite.jei1=This ore is so incredibly powerfully compressed, you have no idea. Like, wow. Mine it, and you will be showered with kakkarite ingots, maybe about 9000 of them.
 tile.badores.kakkarite_block.name=Block of Kakkarite
 
 tile.badores.pandaemonium.name=Pandaemonium
-tile.badores.pandaemonium.jei=Mining this ore rips a hole in the inter-dimensional veils, and lets the nether out into the overworld. 2/10, not recommended.
+tile.badores.pandaemonium.jei1=Mining this ore rips a hole in the inter-dimensional veils, and lets the nether out into the overworld. 2/10, not recommended.
 
 tile.badores.nosleeptonite.name=Nosleeptonite
-tile.badores.nosleeptonite.jei=The ore of your nightmares. The dark king of them all, and otherwise just the incarnation of your deepest fears. AVOID
+tile.badores.nosleeptonite.jei1=The ore of your nightmares. The dark king of them all, and otherwise just the incarnation of your deepest fears. AVOID
 tile.badores.nosleeptonite_block.name=Block of Nosleeptonite
 
 tile.badores.doesntevenexistium.name=Doesntevenexistium
-tile.badores.doesntevenexistium.jei=This is a common ore found deep underground, which serves default practical purposes slightly superior to iron.
+tile.badores.doesntevenexistium.jei1=This is a common ore found deep underground, which serves default practical purposes slightly superior to iron.
 
 tile.badores.appetite.name=Appetite
-tile.badores.appetite.jei=Dude, are you seriously contemplating eating this mineral, whole? It has literally just been burrowed in sand, for who knows how long... Just don't, man. Have some self-respect.
+tile.badores.appetite.jei1=Dude, are you seriously contemplating eating this mineral, whole? It has literally just been burrowed in sand, for who knows how long... Just don't, man. Have some self-respect.
 
 tile.badores.website.name=Website
-tile.badores.website.jei=This ore has discovered a way to break the 4th wall and found a tunnel out of the box. It slowly discoveres the infinite possibilities outside of Minecraft.
+tile.badores.website.jei1=This ore has discovered a way to break the 4th wall and found a tunnel out of the box. It slowly discoveres the infinite possibilities outside of Minecraft.
 tile.badores.website.fail=Oops, failed to open a website!
 
 # items
