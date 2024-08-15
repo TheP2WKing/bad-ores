@@ -34,7 +34,7 @@ public class BadOres {
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Bad Ores Reloaded";
     public static final String VERSION = MC_VERSION + "-" + "1.0.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-4.2.0,);";
+    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-4.2.0,);" + ModReferences.OEDLDOEDL_MODS_FIRST;
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.badores.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.badores.util.proxy.ServerProxy";
 
