@@ -76,7 +76,7 @@ public class ModBlocks {
 	public static final Block APPETITE_ORE = new BlockAppetite(BadOres.MODID, "appetite", BadOres.TAB, 0, 0, Material.SAND, SoundType.SAND, MapColor.SAND, 0, ModToolTypes.SHOVEL, 1.5f, 1.5f, 0);
 	public static final Block CRASHIUM_ORE = new BlockCrashium(BadOres.MODID, "crashium", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 	public static final Block SMITE_ORE = new BlockSmite(BadOres.MODID, "smite", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
-	public static final Block DIAMOND_ORE = new BlockDiamondOre(BadOres.MODID, "diamond_ore", BadOres.TAB, 1, 3, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
+	public static final Block DIAMOND_ORE = new BlockDiamondOre(BadOres.MODID, "diamond_ore", BadOres.TAB, 1, 2, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 	public static final Block KAKKARITE_ORE = new BlockKakkarite(BadOres.MODID, "kakkarite", BadOres.TAB, 0, 0, Material.ROCK, SoundType.STONE, MapColor.STONE, 1, ModToolTypes.PICKAXE, 3.0f, 3.0f, 0);
 
 	public static final Block POLITE_BLOCK = new ModBlockBase(BadOres.MODID, "polite_block", BadOres.TAB, Material.IRON, SoundType.METAL, MapColor.YELLOW, 1, ModToolTypes.PICKAXE, 5.0f, 5.0f, 0);
