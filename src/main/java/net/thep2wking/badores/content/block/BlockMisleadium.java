@@ -7,14 +7,14 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
 import net.thep2wking.badores.config.BadOresConfig;
@@ -32,6 +32,7 @@ public class BlockMisleadium extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.MISLEADIUM_CHAT_MESSAGES) {
 			int numItems = Item.REGISTRY.getKeys().size();
 			Item item;
@@ -53,11 +54,10 @@ public class BlockMisleadium extends ModBlockOreBase {
 
 			int message = new Random().nextInt(7);
 			if (!worldIn.isRemote) {
-				player.sendMessage(
-						new TextComponentString(
-								I18n.format("tile." + BadOres.MODID + ".misleadium.baseMessage." + message,
-										stack.getDisplayName(), Integer.toString(fX), Integer.toString(fY),
-										Integer.toString(fZ))));
+				ITextComponent translatedMessage = new TextComponentTranslation(
+						"tile." + BadOres.MODID + ".misleadium.baseMessage." + message,
+						stack.getDisplayName(), Integer.toString(fX), Integer.toString(fY), Integer.toString(fZ));
+				player.sendMessage(translatedMessage);
 			}
 		}
 	}

@@ -2,12 +2,11 @@ package net.thep2wking.badores.util.events;
 
 import java.util.Random;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
 import net.thep2wking.badores.config.BadOresConfig;
@@ -21,24 +20,21 @@ public class ModItemEvents {
 		Random random = new Random();
 		int message = random.nextInt(9);
 		if (!world.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.POLITE_CHAT_MESSAGES) {
-			player.sendMessage(
-					new TextComponentString(I18n.format("tile." + BadOres.MODID + ".polite.tool." + message)));
+			player.sendMessage(new TextComponentTranslation("tile." + BadOres.MODID + ".polite.tool." + message));
 		}
 	}
 
 	public static void politeAttackMessage(World world, EntityPlayer player) {
 		int message = new Random().nextInt(13);
 		if (!world.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.POLITE_CHAT_MESSAGES) {
-			player.sendMessage(
-					new TextComponentString(I18n.format("tile." + BadOres.MODID + ".polite.attack." + message)));
+			player.sendMessage(new TextComponentTranslation("tile." + BadOres.MODID + ".polite.attack." + message));
 		}
 	}
 
 	public static void politeArmorMessage(World world, EntityPlayer player) {
 		int message = new Random().nextInt(9);
 		if (!world.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.POLITE_CHAT_MESSAGES) {
-			player.sendMessage(
-					new TextComponentString(I18n.format("tile." + BadOres.MODID + ".polite.defend." + message)));
+			player.sendMessage(new TextComponentTranslation("tile." + BadOres.MODID + ".polite.defend." + message));
 		}
 	}
 

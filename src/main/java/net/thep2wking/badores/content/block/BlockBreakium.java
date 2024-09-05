@@ -23,6 +23,7 @@ public class BlockBreakium extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		ItemStack tool = player.getHeldItemMainhand();
 		if (tool != null && tool.isItemStackDamageable() && !player.capabilities.isCreativeMode
 				&& BadOresConfig.EVENTS.BREAKIUM_BREAKS_TOOLS) {

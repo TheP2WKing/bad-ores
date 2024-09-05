@@ -43,8 +43,9 @@ public class BlockExplodeitmite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		Random random = new Random();
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSIONS) {
+			Random random = new Random();
 			if (random.nextInt(5) == 0) {
 				worldIn.newExplosion(null, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5,
 						2.0f + random.nextFloat() * 2.0f, false, BadOresConfig.EVENTS.EXPLODEITMITE_EXPLOSION_DAMAGE);

@@ -30,9 +30,10 @@ public class BlockMovium extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		Random random = new Random();
-		EnumFacing dir = selectRandom(random, EnumFacing.VALUES);
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!player.capabilities.isCreativeMode && !worldIn.isRemote && BadOresConfig.EVENTS.MOVIUM_MOVEMENT) {
+			Random random = new Random();
+			EnumFacing dir = selectRandom(random, EnumFacing.VALUES);
 			int tX = pos.getX() + dir.getFrontOffsetX();
 			int tY = pos.getY() + dir.getFrontOffsetY();
 			int tZ = pos.getZ() + dir.getFrontOffsetZ();

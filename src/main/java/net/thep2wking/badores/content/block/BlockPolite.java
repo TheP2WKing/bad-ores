@@ -6,11 +6,10 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.thep2wking.badores.BadOres;
 import net.thep2wking.badores.config.BadOresConfig;
@@ -27,10 +26,10 @@ public class BlockPolite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		int message = new Random().nextInt(16);
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.POLITE_CHAT_MESSAGES) {
-			player.sendMessage(
-					new TextComponentString(I18n.format("tile." + BadOres.MODID + ".polite.mined." + message)));
+			int message = new Random().nextInt(16);
+			player.sendMessage(new TextComponentTranslation("tile." + BadOres.MODID + ".polite.mined." + message));
 		}
 	}
 }

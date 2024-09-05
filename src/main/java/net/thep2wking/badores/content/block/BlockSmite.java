@@ -25,9 +25,10 @@ public class BlockSmite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		Random random = new Random();
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode
 				&& BadOresConfig.EVENTS.SMITE_CAN_SPAWN_LIGHTNING_BOLT) {
+			Random random = new Random();
 			if (random.nextInt(3) == 0) {
 				worldIn.addWeatherEffect(
 						new EntityLightningBolt(worldIn, player.posX, player.posY, player.posZ, false));

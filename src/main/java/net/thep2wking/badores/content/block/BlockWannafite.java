@@ -34,6 +34,7 @@ public class BlockWannafite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!player.capabilities.isCreativeMode && BadOresConfig.EVENTS.WANNAFITE_MINING_DAMAGE
 				&& EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) != 1) {
 			player.attackEntityFrom(DAMAGE_SOURCE, 6);

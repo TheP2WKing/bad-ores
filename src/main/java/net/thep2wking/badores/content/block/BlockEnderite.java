@@ -27,6 +27,7 @@ public class BlockEnderite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.ENDERITE_TELEPORTATION) {
 			teleportTo(worldIn, player, findRandomSpot(worldIn, pos.getX(), pos.getY(), pos.getZ()));
 		}

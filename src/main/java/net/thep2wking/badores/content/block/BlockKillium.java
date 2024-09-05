@@ -29,8 +29,9 @@ public class BlockKillium extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		Random random = new Random();
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!player.capabilities.isCreativeMode && BadOresConfig.EVENTS.KILLIUM_CAN_KILL_PLAYERS) {
+			Random random = new Random();
 			if (random.nextInt(5) == 0) {
 				player.attackEntityFrom(DAMAGE_SOURCE, Integer.MAX_VALUE);
 			}

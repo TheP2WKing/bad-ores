@@ -27,6 +27,7 @@ public class BlockAppetite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode && BadOresConfig.EVENTS.APPEITTE_RESTORES_HUNGER
 				&& EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand()) != 1) {
 			player.getFoodStats().addStats(6, 0.5f);

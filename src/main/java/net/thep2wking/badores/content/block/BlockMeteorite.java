@@ -30,6 +30,7 @@ public class BlockMeteorite extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!player.capabilities.isCreativeMode && !worldIn.isRemote && BadOresConfig.EVENTS.METEORITE_SPAWNS_BLOCKS) {
 			Random random = new Random();
 			int number = random.nextInt(20) + 3;

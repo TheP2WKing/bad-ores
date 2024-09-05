@@ -61,8 +61,8 @@ public class BlockPandaemonium extends ModBlockOreBase {
 	}
 
 	@Override
-	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state,
-			EntityPlayer player) {
+	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		super.onBlockHarvested(worldIn, pos, state, player);
 		if (!worldIn.isRemote && !player.capabilities.isCreativeMode
 				&& BadOresConfig.EVENTS.PANDAEMONIUM_SPAWNS_BLOCKS) {
 			Random random = new Random();

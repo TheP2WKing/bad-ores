@@ -27,7 +27,9 @@ public class BlockStreetscum extends ModBlockOreBase {
 
 	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-		if (!player.capabilities.isCreativeMode && !worldIn.isRemote && BadOresConfig.EVENTS.STREETSCUM_CAN_DELETE_ITEMS) {
+		super.onBlockHarvested(worldIn, pos, state, player);
+		if (!player.capabilities.isCreativeMode && !worldIn.isRemote
+				&& BadOresConfig.EVENTS.STREETSCUM_CAN_DELETE_ITEMS) {
 			Random random = new Random();
 			List<Integer> availableItems = new ArrayList<Integer>();
 			for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
