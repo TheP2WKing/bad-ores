@@ -1,1 +1,1 @@
-# bad-ores
+# Bad Ores Reloaded
